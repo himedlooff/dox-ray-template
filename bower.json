@@ -23,9 +23,14 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "node_modules",
+    "*.js",
+    "*.md",
+    "*.png",
     "bower_components",
-    "test",
-    "tests"
+    "docs",
+    "LICENSE",
+    "node_modules",
+    "package.json",
+    "src"
   ]
 }
