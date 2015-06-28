@@ -8,22 +8,12 @@ var watch =         require('gulp-watch');
 gulp.task('default', ['doxray']);
 
 gulp.task('build', ['less'], function() {
-    var files = [
-        'src/index.html',
-        'src/doxray-template.css',
-        'src/doxray-template.js'
-    ];
-    return gulp.src(files, { base: './src/' })
+    return gulp.src(['src/*', '!src/styles'])
     .pipe(gulp.dest('template'));
 });
 
 gulp.task('docs', ['build', 'doxray'], function() {
-    var files = [
-        'template/index.html',
-        'template/doxray-template.css',
-        'template/doxray-template.js'
-    ];
-    return gulp.src(files, { base: './template/' })
+    return gulp.src('template/*')
     .pipe(gulp.dest('docs'));
 });
 
