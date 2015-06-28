@@ -13,9 +13,12 @@
   ],
   "keywords": [
     "documentation",
+    "dox-ray"
+    "handlebars.js",
     "patterns",
     "library",
-    "styleguide"
+    "styleguide",
+    "template"
   ],
   "license": "MIT",
   "ignore": [
