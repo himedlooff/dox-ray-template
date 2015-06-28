@@ -3,9 +3,9 @@ var Doxray = {
     {
       "header": true,
       "label": ".doxray",
-      "description": "The namespace which all Dox-ray classes should be prepended with.",
+      "description": "The namespace which all Doxray classes should be prepended with.",
       "notes": [
-        "All Dox-ray classes must be namespaced with `doxray` in order to avoid accidentally overriding the users' stylesheet.\n",
+        "All Doxray classes must be namespaced with `doxray` in order to avoid accidentally overriding the users' stylesheet.\n",
         "This class must be added to the `<body>` tag.\n"
       ],
       "less": ".doxray {\n    margin: 0;\n    padding: 0;\n}",

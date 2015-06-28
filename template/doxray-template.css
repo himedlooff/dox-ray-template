@@ -64,10 +64,10 @@ header:
 label:
     .doxray
 description:
-    The namespace which all Dox-ray classes should be prepended with.
+    The namespace which all Doxray classes should be prepended with.
 notes:
     - >
-        All Dox-ray classes must be namespaced with `doxray` in order to
+        All Doxray classes must be namespaced with `doxray` in order to
         avoid accidentally overriding the users' stylesheet.
     - >
         This class must be added to the `<body>` tag.

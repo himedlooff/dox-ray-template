@@ -1,11 +1,11 @@
 {
-  "name": "dox-ray-template",
-  "version": "0.1.1",
-  "homepage": "https://github.com/himedlooff/dox-ray-template",
+  "name": "doxray-template",
+  "version": "0.2.0",
+  "homepage": "https://github.com/himedlooff/doxray-template",
   "authors": [
     "Mike Morici <himedlooff@yahoo.com>"
   ],
-  "description": "A handlebars.js template for Dox-ray",
+  "description": "A handlebars.js template for Doxray",
   "main": [
     "template/index.html",
     "template/doxray-template.css",
@@ -13,7 +13,7 @@
   ],
   "keywords": [
     "documentation",
-    "dox-ray",
+    "doxray",
     "handlebars.js",
     "patterns",
     "library",
