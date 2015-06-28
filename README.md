@@ -2,13 +2,12 @@
 
 A handlebars.js template for Dox-ray
 
-Check an example output on the [docs page](http://himedlooff.github.io/dox-ray-template/docs/).
-They document the style patterns that go into making this template.
+[Demo](http://himedlooff.github.io/dox-ray-template/docs/)
 
 ## Getting started
 
-- Set up a folder for the template to live in. You can name it anything you want
-  but as an example let's call it `docs`.
+- Set up a folder for the template files to live in. You can name it anything
+  you want but as an example let's call it `docs`.
 - Download the template files from the `template` folder of this repository. I
   recommend using <http://bower.io/> so you can easily update the template if
   you need to.
