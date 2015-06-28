@@ -23,6 +23,10 @@ Example pattern screencap
   I recommend using a task runner like <http://gruntjs.com/> or
   <http://gulpjs.com/> so you can easily move the template files after
   downloading them.
+- After moving the template files open up `index.html` and uncomment
+  `<!-- <link rel="stylesheet" href="your-stylesheet-here.css"> -->` and
+  replace `your-stylesheet-here.css` with your own stylesheet so your patterns
+  will render as expected.
 - Set up Doxray to write a file named `doxray-parsed-data.js` into `docs`. You
   can do this from the command line or by setting up a Grunt or Gulp task.
 - That's it, open the `index.html` file in `docs`.
