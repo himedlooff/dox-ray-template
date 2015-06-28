@@ -4,6 +4,9 @@ A handlebars.js template for Dox-ray
 
 [Demo](http://himedlooff.github.io/dox-ray-template/docs/)
 
+![Table of contents screencap](screencap-1.png)
+![Example pattern screencap](screencap-2.png)
+
 ## Getting started
 
 - Set up a folder for the template files to live in. You can name it anything
