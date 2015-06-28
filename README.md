@@ -37,7 +37,7 @@ $ bower install dox-ray-template
 ```js
 // Move the template files into `docs`.
 // You only need to do this after installing or updating dox-ray-template.
-gulp.task('doxray-template', function() {
+gulp.task('move-doxray-template', function() {
     return gulp.src(['bower_components/dox-ray-template/template/*'])
     .pipe(gulp.dest('docs'));
 });
