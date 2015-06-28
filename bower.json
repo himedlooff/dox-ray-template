@@ -1,0 +1,28 @@
+{
+  "name": "dox-ray-template",
+  "version": "0.1.0",
+  "homepage": "https://github.com/himedlooff/dox-ray-template",
+  "authors": [
+    "Mike Morici <himedlooff@yahoo.com>"
+  ],
+  "description": "A handlebars.js template for Dox-ray",
+  "main": [
+    "template/index.html",
+    "template/doxray-template.css",
+    "template/doxray-template.js"
+  ],
+  "keywords": [
+    "documentation",
+    "patterns",
+    "library",
+    "styleguide"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
