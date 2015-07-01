@@ -34,46 +34,6 @@ description:
 
 /* doxray
 label:
-    .doxray-icon-file
-markup: |
-    <i class="doxray-icon-file"></i>
-*/
-
-.doxray-icon-file {
-    &:before {
-        content: "ƒ";
-        font-family: @doxray-font-family-default;
-        font-weight: @doxray-font-weight-normal;
-    }
-
-    &:after {
-        content: " ";
-    }
-}
-
-
-/* doxray
-label:
-    .doxray-icon-pattern
-markup: |
-    <i class="doxray-icon-pattern"></i>
-*/
-
-.doxray-icon-pattern {
-    &:before {
-        content: "⁋";
-        font-family: @doxray-font-family-default;
-        font-weight: @doxray-font-weight-normal;
-    }
-
-    &:after {
-        content: " ";
-    }
-}
-
-
-/* doxray
-label:
     .doxray-toc_masthead
 markup: |
     <h1 class="doxray-toc_masthead">
@@ -380,12 +340,12 @@ markup: |
 
     code {
         display: inline-block;
-        padding: 2px 5px;
-        border-radius: 3px;
+        padding: 3px 5px;
+        border-radius: 5px;
         background: @doxray-color-dirty-white;
         color: @doxray-color-gray;
         font-family: @doxray-font-family-code;
-        font-size: .8em;
+        font-size: .9em;
     }
 }
 
@@ -423,12 +383,12 @@ markup: |
 
     code {
         display: inline-block;
-        padding: 2px 5px;
-        border-radius: 3px;
+        padding: 3px 5px;
+        border-radius: 5px;
         background: @doxray-color-dirty-white;
         color: @doxray-color-gray;
         font-family: @doxray-font-family-code;
-        font-size: .8em;
+        font-size: .9em;
     }
 }
 
@@ -472,15 +432,8 @@ markup: |
 */
 
 .doxray-doc-markup {
-    margin: (@doxray-margin-large / 2) (@doxray-margin-large / 2 * -1);
+    margin: ((@doxray-margin-large / 2) + (@doxray-margin-large / 4)) (@doxray-margin-large / 2 * -1) (@doxray-margin-large / 2);
     box-shadow: 0 0 6px @doxray-color-shadow;
-    overflow: hidden;
-
-    &:after {
-        display: table;
-        clear: both;
-        content: "";
-    }
 }
 
 
@@ -560,8 +513,7 @@ label:
 */
 
 .doxray-doc-code {
-    position: relative;
-    margin: @doxray-margin 0 0;
+    margin: 0;
 }
 
 
@@ -577,68 +529,6 @@ label:
     background: @doxray-color-dirty-white;
     font-size: @doxray-font-size-md;
     line-height: 1.5;
-}
-
-
-/* doxray
-label:
-    .doxray-doc-code-expander
-*/
-
-.doxray-doc-code-expander {
-    position: relative;
-}
-
-
-/* doxray
-label:
-    .doxray-doc-code-expander_body
-*/
-
-.doxray-doc-code-expander_body {
-    height: 160px;
-    overflow: hidden;
-}
-
-
-/* doxray
-label:
-    .doxray-doc-code-expander_btn
-*/
-
-.doxray-doc-code-expander_btn {
-    &,
-    &:active,
-    &:link,
-    &:focus,
-    &:hover,
-    &:visited {
-        display: block;
-        width: 100%;
-        padding: .5em .75em;
-        border: 0;
-        background: @doxray-color-dirtier-white;
-        color: @doxray-color-gray;
-        font-size: @doxray-font-size-sm;
-        line-height: 1;
-        text-align: center;
-        text-decoration: none;
-        outline: 0;
-        cursor: pointer;
-    }
-
-    &:hover,
-    &:focus {
-        background: darken(@doxray-color-dirtier-white, 2%);
-    }
-
-    &:before {
-        content: "⇣";
-    }
-
-    &__flipped:before {
-        content: "⇡";
-    }
 }
 
 
@@ -699,5 +589,93 @@ label:
 
     & + & {
         margin-top: -1px;
+    }
+}
+
+
+/* doxray
+label:
+    .doxray-tabs
+markup: |
+    <div class="doxray-tabs">
+        <div class="doxray-tabs_tabs">
+            <button class="doxray-tabs_btn">
+                Markup
+            </button>
+            <button class="doxray-tabs_btn">
+                Less
+            </button>
+        </div>
+        <div class="doxray-tabs_body">
+            Markup tab body
+        </div>
+        <div class="doxray-tabs_body">
+            Less tab body
+        </div>
+    </div>
+blockMarkup:
+    true
+*/
+
+.doxray-tabs_tabs {
+    position: relative;
+    top: -16px;
+    height: 0;
+    padding-left: @doxray-margin-large * .5;
+}
+
+.doxray-tabs_btn {
+    &,
+    &:active,
+    &:link,
+    &:visited {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        padding: 10px 12px;
+        border: 1px solid @doxray-color-clean-white;
+        background: @doxray-color-shadow;
+        color: @doxray-color-clean-white;
+        font-family: @doxray-font-family-default;
+        font-size: @doxray-font-size-xsm;
+        font-weight: @doxray-font-weight-normal;
+        letter-spacing: 1px;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &:hover,
+    &__active,
+    &__active:hover {
+        background: @doxray-color-gray;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    & + & {
+        margin-left: -4px;
+        border-left: 0;
+    }
+
+    &:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.doxray-tabs_body {
+    display: none;
+
+    &__visible {
+        display: block;
     }
 }
