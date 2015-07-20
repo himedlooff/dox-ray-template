@@ -119,26 +119,18 @@
                     {{/if}}
                     <div class="doxray-tabs doxray-doc-markup" data-tabs>
                         {{#if this.markup}}
-                            {{#if this.themes}}
-                                <div class="doxray-doc-markup_rendered{{#if ../this.blockMarkup}} doxray-doc-markup_rendered__block{{/if}} doxray-doc-markup-theme">
-                                    <span class="doxray-doc-markup-theme_label">
-                                        no theme (mint)
+                            {{#each this.wrappers}}
+                                <div class="doxray-doc-markup_rendered{{#if ../this.blockMarkup}} doxray-doc-markup_rendered__block{{/if}} doxray-doc-markup-wrapper {{this}}">
+                                    <span class="doxray-doc-markup-wrapper_label">
+                                        {{this}}
                                     </span>
-                                    {{{this.markup}}}
+                                    {{{../this.markup}}}
                                 </div>
-                                {{#each this.themes}}
-                                    <div class="doxray-doc-markup_rendered{{#if ../this.blockMarkup}} doxray-doc-markup_rendered__block{{/if}} doxray-doc-markup-theme {{this}}-theme">
-                                        <span class="doxray-doc-markup-theme_label">
-                                            {{this}} theme
-                                        </span>
-                                        {{{../this.markup}}}
-                                    </div>
-                                {{/each}}
                             {{else}}
                                 <div class="doxray-doc-markup_rendered{{#if this.blockMarkup}} doxray-doc-markup_rendered__block{{/if}}">
                                     {{{this.markup}}}
                                 </div>
-                            {{/if}}
+                            {{/each}}
                         {{/if}}
                         <div class="doxray-tabs_tabs">
                             {{#if this.markup}}

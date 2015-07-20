@@ -23,6 +23,11 @@ var Doxray = {
     {
       "label": ".doxray-toc_masthead",
       "markup": "<h1 class=\"doxray-toc_masthead\">\n    Masthead\n</h1>\n",
+      "wrappers": [
+        "default",
+        "mint",
+        "mocca"
+      ],
       "less": ".doxray-toc_masthead {\n    margin: 0;\n    padding: @doxray-margin-large;\n    border-bottom: 1px solid @doxray-color-dirtier-white;\n    background: @doxray-color-paper-white;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_masthead"
@@ -146,7 +151,7 @@ var Doxray = {
       "label": ".doxray-doc-markup_rendered",
       "description": "Contains both the rendered markup.\n",
       "notes": [
-        "By default this container uses `display: inline-block;`. This is beneficial when using themes, since they will stack horizontally instead of vertically.\n"
+        "By default this container uses `display: inline-block;`. This is beneficial when using wrappers, since they will stack horizontally so you can compare them.\n"
       ],
       "markup": "<div class=\"doxray-doc-markup\">\n    <div class=\"doxray-doc-markup_rendered\">\n        Markup is rendered here\n    </div>\n</div>\n",
       "less": ".doxray-doc-markup_rendered {\n    display: inline-block;\n    padding: @doxray-margin-large;\n    margin-right: -3.75px;\n}",
@@ -164,16 +169,16 @@ var Doxray = {
       "slug": "doxray-doc-markup_rendered__block"
     },
     {
-      "label": ".doxray-doc-markup-theme",
-      "less": ".doxray-doc-markup-theme {\n    position: relative;\n}",
+      "label": ".doxray-doc-markup-wrapper",
+      "less": ".doxray-doc-markup-wrapper {\n    position: relative;\n}",
       "filename": "doxray-template.less",
-      "slug": "doxray-doc-markup-theme"
+      "slug": "doxray-doc-markup-wrapper"
     },
     {
-      "label": ".doxray-doc-markup-theme_label",
-      "less": ".doxray-doc-markup-theme_label {\n    position: absolute;\n    top: 2.5em;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-sm;\n    line-height: 1;\n    text-transform: capitalize;\n}",
+      "label": ".doxray-doc-markup-wrapper_label",
+      "less": ".doxray-doc-markup-wrapper_label {\n    position: absolute;\n    top: 2.5em;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-sm;\n    line-height: 1;\n}",
       "filename": "doxray-template.less",
-      "slug": "doxray-doc-markup-theme_label"
+      "slug": "doxray-doc-markup-wrapper_label"
     },
     {
       "label": ".doxray-doc-code",

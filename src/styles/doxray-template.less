@@ -39,6 +39,7 @@ markup: |
     <h1 class="doxray-toc_masthead">
         Masthead
     </h1>
+wrappers: [default, mint, mocca]
 */
 
 .doxray-toc_masthead {
@@ -445,8 +446,8 @@ description: >
 notes:
     - >
         By default this container uses `display: inline-block;`. This is
-        beneficial when using themes, since they will stack horizontally instead
-        of vertically.
+        beneficial when using wrappers, since they will stack horizontally
+        so you can compare them.
 markup: |
     <div class="doxray-doc-markup">
         <div class="doxray-doc-markup_rendered">
@@ -484,26 +485,25 @@ markup: |
 
 /* doxray
 label:
-    .doxray-doc-markup-theme
+    .doxray-doc-markup-wrapper
 */
 
-.doxray-doc-markup-theme {
+.doxray-doc-markup-wrapper {
     position: relative;
 }
 
 
 /* doxray
 label:
-    .doxray-doc-markup-theme_label
+    .doxray-doc-markup-wrapper_label
 */
 
-.doxray-doc-markup-theme_label {
+.doxray-doc-markup-wrapper_label {
     position: absolute;
     top: 2.5em;
     font-family: @doxray-font-family-default;
     font-size: @doxray-font-size-sm;
     line-height: 1;
-    text-transform: capitalize;
 }
 
 
