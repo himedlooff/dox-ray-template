@@ -21,16 +21,25 @@ var Doxray = {
       "slug": "the-rest-of-the-patterns"
     },
     {
-      "label": ".doxray-toc_masthead",
-      "markup": "<h1 class=\"doxray-toc_masthead\">\n    Masthead\n</h1>\n",
-      "wrappers": [
-        "default",
-        "mint",
-        "mocca"
-      ],
-      "less": ".doxray-toc_masthead {\n    margin: 0;\n    padding: @doxray-margin-large;\n    border-bottom: 1px solid @doxray-color-dirtier-white;\n    background: @doxray-color-paper-white;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n}",
+      "label": ".doxray-intro",
+      "markup": "...\n",
+      "less": ".doxray-intro {\n    margin: 0 0 1em;\n}\n\n.doxray-intro_header {\n    margin: 0;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    line-height: 1.2;\n}",
       "filename": "doxray-template.less",
-      "slug": "doxray-toc_masthead"
+      "slug": "doxray-intro"
+    },
+    {
+      "label": ".doxray-toc_header",
+      "markup": "<h1 class=\"doxray-toc_header\">\n    Header\n</h1>\n",
+      "less": ".doxray-toc_header {\n    padding: @doxray-margin-large;\n    border-bottom: 1px solid @doxray-color-dirtier-white;\n    background: @doxray-color-paper-white;\n}",
+      "filename": "doxray-template.less",
+      "slug": "doxray-toc_header"
+    },
+    {
+      "label": ".doxray-toc_title",
+      "markup": "<header class=\"doxray-toc_title\"></header>\n",
+      "less": ".doxray-toc_title {\n    margin: 0;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    line-height: 1.2;\n}",
+      "filename": "doxray-template.less",
+      "slug": "doxray-toc_title"
     },
     {
       "label": ".doxray-toc_body",
@@ -280,6 +289,87 @@ var Doxray = {
     },
     {
       "header": true,
+      "description": "...",
+      "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_brand\">\n        Doxray\n    </span>\n    <span class=\"doxray-title_tagline\">\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1\">\n            <b class=\"doxray-title_tagline_p\">¶</b>attern\n        </span>\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend\">\n            &nbsp;\n        </span>\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2\">\n            Library\n        </span>\n    </span>\n</h1>\n",
+      "less": "",
+      "filename": "doxray-title.less"
+    },
+    {
+      "label": ".doxray-title",
+      "notes": [
+        "The margins help visually center the title since the Open Sans font and the ribbons have a natural offset to them.\n"
+      ],
+      "less": ".doxray-title {\n    margin: 0 0 4px -4px;\n    font-size: 1em;\n    text-align: center;\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-title"
+    },
+    {
+      "label": ".doxray-title_brand",
+      "description": "The brand that is using the pattern library. This would get replaced by whoever is using the template.",
+      "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_brand\">\n        Doxray\n    </span>\n</h1>\n",
+      "less": ".doxray-title_brand {\n    display: block;\n    margin: 0 0 .2em 0;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    letter-spacing: -.03em;\n    line-height: 1.2;\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-title_brand"
+    },
+    {
+      "label": ".doxray-title_tagline",
+      "description": "A CSS based ribbon effect to contain the 'Pattern Library' tagline.",
+      "notes": [
+        "Rotates to counter the skew of `.doxray-title_tagline_ribbon` to make it look level.\n"
+      ],
+      "less": ".doxray-title_tagline {\n    position: relative;\n    display: inline-block;\n    perspective: 60px;\n    transform: rotate(8deg);\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-title_tagline"
+    },
+    {
+      "label": ".doxray-title_tagline_ribbon",
+      "description": "Text with padding and skew to give it a ribbon effect.",
+      "markup": "<span class=\"doxray-title_tagline\">\n    <span class=\"doxray-title_tagline_ribbon\">\n        Lorem ipsum\n    </span>\n</span>\n",
+      "less": ".doxray-title_tagline_ribbon {\n    position: relative;\n    display: inline-block;\n    padding: 6px 10px 8px;\n    border: 1px solid @doxray-color-gray;\n    background: @doxray-color-paper-white;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: 10px;\n    font-weight: @doxray-font-weight-normal;\n    letter-spacing: 1px;\n    line-height: 1.2;\n    transform: skewY(-8deg);\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-title_tagline_ribbon"
+    },
+    {
+      "label": ".doxray-title_tagline_ribbon__1",
+      "notes": [
+        "Needs the highest `z-index` to place it above all ofther pieces of the ribbon.\n"
+      ],
+      "less": ".doxray-title_tagline_ribbon__1 {\n    z-index: 3;\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-title_tagline_ribbon__1"
+    },
+    {
+      "label": ".doxray-title_tagline_ribbon__2",
+      "notes": [
+        "Needs the lowest `z-index` to place it below all ofther pieces of the ribbon.\n",
+        "Also needs negative left margin to pull it under `.doxray-title_tagline_ribbon__1` and `.doxray-title_tagline_ribbon__bend`.\n"
+      ],
+      "markup": "<span class=\"doxray-title_tagline\">\n    <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1\">\n        Ribbon 1\n    </span>\n    <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2\" style=\"background-color: red;\">\n        Ribbon 2\n    </span>\n</span>\n",
+      "less": ".doxray-title_tagline_ribbon__2 {\n    margin-left: -14px;\n    padding-left: 14px;\n    z-index: 1;\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-title_tagline_ribbon__2"
+    },
+    {
+      "label": ".doxray-title_tagline_ribbon__bend",
+      "description": "The bent underside of the ribbon.",
+      "notes": [
+        "Needs `&nbsp;` to give it height.\n"
+      ],
+      "markup": "<span class=\"doxray-title_tagline\">\n    <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1\">\n        Ribbon 1\n    </span>\n    <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend\" style=\"background-color: red;\">\n        &nbsp;\n    </span>\n    <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2\">\n        Ribbon 2\n    </span>\n</span>\n",
+      "less": ".doxray-title_tagline_ribbon__bend {\n    position: relative;\n    width: 8px;\n    margin-left: -14px;\n    padding-left: 0;\n    padding-right: 0;\n    border-color: @doxray-color-shadow;\n    background: @doxray-color-shadow;\n    transform: skewY(-43deg);\n    z-index: 2;\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-title_tagline_ribbon__bend"
+    },
+    {
+      "label": ".doxray-title_tagline_p",
+      "description": "A reverse pilcrow to use as the 'P' in 'Pattern Library'.",
+      "markup": "<span class=\"doxray-title_tagline\">\n    <span class=\"doxray-title_tagline_ribbon\">\n        <b class=\"doxray-title_tagline_p\">¶</b>\n    </span>\n</span>\n",
+      "less": ".doxray-title_tagline_p {\n    display: inline-block;\n    transform: scaleX(-1) translateX(.75px);\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-title_tagline_p"
+    },
+    {
+      "header": true,
       "label": ".doxray-docs",
       "less": "",
       "filename": "doxray-docs.less",
@@ -287,7 +377,7 @@ var Doxray = {
     },
     {
       "label": ".doxray-docs_nav",
-      "less": ".doxray-docs_nav {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    width: @doxray-nav-width;\n    background: @doxray-color-paper-white;\n    overflow: hidden;\n    z-index: 0;\n}\n\n.doxray-docs_nav-scroll {\n    width: 100%;\n    height: 100%;\n    padding: 20px 0 0 20px;\n    overflow-y: auto;\n    overflow-x: hidden;\n}",
+      "less": ".doxray-docs_nav {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    width: @doxray-nav-width;\n    background: @doxray-color-paper-white;\n    overflow: hidden;\n    z-index: 0;\n}\n\n.doxray-docs_nav-scroll {\n    width: 100%;\n    height: 100%;\n    padding: 20px 0 0 20px;\n    overflow-y: auto;\n    overflow-x: hidden;\n}\n\n.doxray-docs_nav-title {\n    padding: 30px 0 50px;\n}\n\n.doxray-docs_nav-content {\n    width: @doxray-nav-width - 40px;\n}",
       "filename": "doxray-docs.less",
       "slug": "doxray-docs_nav"
     },

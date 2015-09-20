@@ -28,6 +28,190 @@ label:
 /* doxray
 header:
     true
+description:
+    ...
+markup: |
+    <h1 class="doxray-title">
+        <span class="doxray-title_brand">
+            Doxray
+        </span>
+        <span class="doxray-title_tagline">
+            <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1">
+                <b class="doxray-title_tagline_p">¶</b>attern
+            </span>
+            <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend">
+                &nbsp;
+            </span>
+            <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2">
+                Library
+            </span>
+        </span>
+    </h1>
+*/
+/* doxray
+label:
+    .doxray-title
+notes:
+    - >
+        The margins help visually center the title since the Open Sans font and
+        the ribbons have a natural offset to them.
+*/
+.doxray-title {
+  margin: 0 0 4px -4px;
+  font-size: 1em;
+  text-align: center;
+}
+/* doxray
+label:
+    .doxray-title_brand
+description:
+    The brand that is using the pattern library. This would get replaced by
+    whoever is using the template.
+markup: |
+    <h1 class="doxray-title">
+        <span class="doxray-title_brand">
+            Doxray
+        </span>
+    </h1>
+*/
+.doxray-title_brand {
+  display: block;
+  margin: 0 0 .2em 0;
+  color: #474646;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+/* doxray
+label:
+    .doxray-title_tagline
+description:
+    A CSS based ribbon effect to contain the 'Pattern Library' tagline.
+notes:
+    - >
+        Rotates to counter the skew of `.doxray-title_tagline_ribbon` to make it look level.
+*/
+.doxray-title_tagline {
+  position: relative;
+  display: inline-block;
+  perspective: 60px;
+  transform: rotate(8deg);
+}
+/* doxray
+label:
+    .doxray-title_tagline_ribbon
+description:
+    Text with padding and skew to give it a ribbon effect.
+markup: |
+    <span class="doxray-title_tagline">
+        <span class="doxray-title_tagline_ribbon">
+            Lorem ipsum
+        </span>
+    </span>
+*/
+.doxray-title_tagline_ribbon {
+  position: relative;
+  display: inline-block;
+  padding: 6px 10px 8px;
+  border: 1px solid #474646;
+  background: #fdfdfd;
+  color: #474646;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  transform: skewY(-8deg);
+}
+/* doxray
+label:
+    .doxray-title_tagline_ribbon__1
+notes:
+    - >
+        Needs the highest `z-index` to place it above all ofther pieces of the
+        ribbon.
+*/
+.doxray-title_tagline_ribbon__1 {
+  z-index: 3;
+}
+/* doxray
+label:
+    .doxray-title_tagline_ribbon__2
+notes:
+    - >
+        Needs the lowest `z-index` to place it below all ofther pieces of the
+        ribbon.
+    - >
+        Also needs negative left margin to pull it under
+        `.doxray-title_tagline_ribbon__1` and `.doxray-title_tagline_ribbon__bend`.
+markup: |
+    <span class="doxray-title_tagline">
+        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1">
+            Ribbon 1
+        </span>
+        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2" style="background-color: red;">
+            Ribbon 2
+        </span>
+    </span>
+*/
+.doxray-title_tagline_ribbon__2 {
+  margin-left: -14px;
+  padding-left: 14px;
+  z-index: 1;
+}
+/* doxray
+label:
+    .doxray-title_tagline_ribbon__bend
+description:
+    The bent underside of the ribbon.
+notes:
+    - >
+        Needs `&nbsp;` to give it height.
+markup: |
+    <span class="doxray-title_tagline">
+        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1">
+            Ribbon 1
+        </span>
+        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend" style="background-color: red;">
+            &nbsp;
+        </span>
+        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2">
+            Ribbon 2
+        </span>
+    </span>
+*/
+.doxray-title_tagline_ribbon__bend {
+  position: relative;
+  width: 8px;
+  margin-left: -14px;
+  padding-left: 0;
+  padding-right: 0;
+  border-color: #6e6c6c;
+  background: #6e6c6c;
+  transform: skewY(-43deg);
+  z-index: 2;
+}
+/* doxray
+label:
+    .doxray-title_tagline_p
+description:
+    A reverse pilcrow to use as the 'P' in 'Pattern Library'.
+markup: |
+    <span class="doxray-title_tagline">
+        <span class="doxray-title_tagline_ribbon">
+            <b class="doxray-title_tagline_p">¶</b>
+        </span>
+    </span>
+*/
+.doxray-title_tagline_p {
+  display: inline-block;
+  transform: scaleX(-1) translateX(0.75px);
+}
+/* doxray
+header:
+    true
 label:
     .doxray-docs
 */
@@ -51,6 +235,12 @@ label:
   padding: 20px 0 0 20px;
   overflow-y: auto;
   overflow-x: hidden;
+}
+.doxray-docs_nav-title {
+  padding: 30px 0 50px;
+}
+.doxray-docs_nav-content {
+  width: 220px;
 }
 /* doxray
 label:
@@ -91,21 +281,45 @@ description:
 */
 /* doxray
 label:
-    .doxray-toc_masthead
+    .doxray-intro
 markup: |
-    <h1 class="doxray-toc_masthead">
-        Masthead
-    </h1>
-wrappers: [default, mint, mocca]
+    ...
 */
-.doxray-toc_masthead {
+.doxray-intro {
+  margin: 0 0 1em;
+}
+.doxray-intro_header {
   margin: 0;
-  padding: 72px;
-  border-bottom: 1px solid #f0f0f0;
-  background: #fdfdfd;
   font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
   font-size: 42px;
   font-weight: 300;
+  line-height: 1.2;
+}
+/* doxray
+label:
+    .doxray-toc_header
+markup: |
+    <h1 class="doxray-toc_header">
+        Header
+    </h1>
+*/
+.doxray-toc_header {
+  padding: 72px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fdfdfd;
+}
+/* doxray
+label:
+    .doxray-toc_title
+markup: |
+    <header class="doxray-toc_title"></header>
+*/
+.doxray-toc_title {
+  margin: 0;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.2;
 }
 /* doxray
 label:

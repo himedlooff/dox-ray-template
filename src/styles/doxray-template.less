@@ -1,4 +1,5 @@
 @import "doxray-variables.less";
+@import "doxray-title.less";
 @import "doxray-docs.less";
 
 /* doxray
@@ -34,22 +35,53 @@ description:
 
 /* doxray
 label:
-    .doxray-toc_masthead
+    .doxray-intro
 markup: |
-    <h1 class="doxray-toc_masthead">
-        Masthead
-    </h1>
-wrappers: [default, mint, mocca]
+    ...
 */
 
-.doxray-toc_masthead {
+.doxray-intro {
+    margin: 0 0 1em;
+}
+
+.doxray-intro_header {
     margin: 0;
-    padding: @doxray-margin-large;
-    border-bottom: 1px solid @doxray-color-dirtier-white;
-    background: @doxray-color-paper-white;
     font-family: @doxray-font-family-default;
     font-size: @doxray-font-size-xlg;
     font-weight: @doxray-font-weight-light;
+    line-height: 1.2;
+}
+
+
+/* doxray
+label:
+    .doxray-toc_header
+markup: |
+    <h1 class="doxray-toc_header">
+        Header
+    </h1>
+*/
+
+.doxray-toc_header {
+    padding: @doxray-margin-large;
+    border-bottom: 1px solid @doxray-color-dirtier-white;
+    background: @doxray-color-paper-white;
+}
+
+
+/* doxray
+label:
+    .doxray-toc_title
+markup: |
+    <header class="doxray-toc_title"></header>
+*/
+
+.doxray-toc_title {
+    margin: 0;
+    font-family: @doxray-font-family-default;
+    font-size: @doxray-font-size-xlg;
+    font-weight: @doxray-font-weight-light;
+    line-height: 1.2;
 }
 
 

@@ -32,6 +32,7 @@ gulp.task('doxray', function() {
     doxray([
             'src/styles/doxray-template.less',
             'src/styles/doxray-variables.less',
+            'src/styles/doxray-title.less',
             'src/styles/doxray-docs.less'
         ], {
         jsFile: 'docs/doxray-parsed-data.js',
