@@ -46,13 +46,13 @@ var Doxray = {
     },
     {
       "label": ".doxray-toc_file-list",
-      "less": ".doxray-toc_file-list {\n    display: -webkit-box;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-flex-wrap: wrap;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n    margin: 0;\n    padding: 0;\n    list-style-type: none;\n\n    &__docs-nav {\n        padding: 20px;\n    }\n}",
+      "less": ".doxray-toc_file-list {\n    margin: 0;\n    padding: 0;\n    list-style-type: none;\n\n    &__docs-nav {\n        padding: 20px;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_file-list"
     },
     {
       "label": ".doxray-toc_file-list",
-      "less": ".doxray-toc_file-list-item {\n    width: 220px;\n    min-width: 220px;\n    margin: 0 1em 4em 0;\n\n    &.is-collapsed {\n        margin-bottom: 1em;\n    }\n\n    &.is-collapsed .doxray-link {\n        display: none;\n    }\n\n    &.is-collapsed .doxray-link__file {\n        display: block;\n        margin-bottom: 0;\n    }\n}",
+      "less": ".doxray-toc_file-list-item {\n    display: inline-block;\n    vertical-align: top;\n    width: 220px;\n    margin: 0 (@doxray-margin - 4px) @doxray-margin-large 0;\n\n    &.is-collapsed {\n        margin-bottom: @doxray-margin;\n    }\n\n    &.is-collapsed .doxray-link {\n        display: none;\n    }\n\n    &.is-collapsed .doxray-link__file {\n        display: block;\n        margin-bottom: 0;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_file-list"
     },
