@@ -13,26 +13,26 @@
                     <input class="js-doxray-toggle-collapsed-toc" type="checkbox">
                     Collapsed view
                 </label>
-                <ul class="doxray-toc_file-list">
-                    {{#each this}}
-                    <li class="doxray-toc_file-list-item">
-                        <a class="doxray-link doxray-link__file" href="?file={{@key}}">
-                            {{@key}}
-                        </a>
-                        {{#each this}}
-                            {{#if this.header}}
-                                <a class="doxray-link doxray-link__header" href="?file={{@../key}}#{{this.slug}}">
-                                    {{this.label}}
-                                </a>
-                            {{else}}
-                                <a class="doxray-link" href="?file={{@../key}}#{{this.slug}}">
-                                    {{this.label}}
-                                </a>
-                            {{/if}}
-                        {{/each}}
-                    </li>
-                    {{/each}}
-                </ul>
+                {{#each this}}
+                    <ul class="doxray-toc_file-list">
+                        <li class="doxray-toc_file-list-item">
+                            <a class="doxray-link doxray-link__file" href="?file={{@key}}">
+                                {{@key}}
+                            </a>
+                            {{#each this}}
+                                {{#if this.header}}
+                                    <a class="doxray-link doxray-link__header" href="?file={{@../key}}#{{this.slug}}">
+                                        {{this.label}}
+                                    </a>
+                                {{else}}
+                                    <a class="doxray-link" href="?file={{@../key}}#{{this.slug}}">
+                                        {{this.label}}
+                                    </a>
+                                {{/if}}
+                            {{/each}}
+                        </li>
+                    </ul>
+                {{/each}}
             </div>
         </main>
     </script>
@@ -52,7 +52,7 @@
     <script type="text/x-handlebars-template" id="doxray-docs_nav-template">
         <nav class="doxray-docs_nav" id="doxray-docs_nav">
             <div class="doxray-docs_nav-scroll">
-                <ul class="doxray-toc_file-list doxray-toc_file-list__docs-nav">
+                <ul class="doxray-toc_file-list">
                     <li class="doxray-toc_file-list-item">
                         <a class="doxray-link doxray-link__file" href="?file={{this.0.filename}}">
                             {{this.0.filename}}

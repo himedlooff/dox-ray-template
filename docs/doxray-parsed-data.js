@@ -46,13 +46,13 @@ var Doxray = {
     },
     {
       "label": ".doxray-toc_file-list",
-      "less": ".doxray-toc_file-list {\n    margin: 0;\n    padding: 0;\n    list-style-type: none;\n\n    &__docs-nav {\n        padding: 20px;\n    }\n}",
+      "less": ".doxray-toc_file-list {\n    display: inline-block;\n    width: 220px;\n    margin: 0 @doxray-margin @doxray-margin-large 0;\n    padding: 0;\n    vertical-align: top;\n    list-style-type: none;\n\n    &.is-collapsed {\n        margin-bottom: @doxray-margin;\n    }\n\n    &.is-collapsed .doxray-link {\n        display: none;\n    }\n\n    &.is-collapsed .doxray-link__file {\n        display: block;\n        margin-bottom: 0;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_file-list"
     },
     {
       "label": ".doxray-toc_file-list",
-      "less": ".doxray-toc_file-list-item {\n    display: inline-block;\n    vertical-align: top;\n    width: 220px;\n    margin: 0 (@doxray-margin - 4px) @doxray-margin-large 0;\n\n    &.is-collapsed {\n        margin-bottom: @doxray-margin;\n    }\n\n    &.is-collapsed .doxray-link {\n        display: none;\n    }\n\n    &.is-collapsed .doxray-link__file {\n        display: block;\n        margin-bottom: 0;\n    }\n}",
+      "less": ".doxray-toc_file-list-item {\n    margin: 0;\n    padding: 0;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_file-list"
     },
@@ -287,7 +287,7 @@ var Doxray = {
     },
     {
       "label": ".doxray-docs_nav",
-      "less": ".doxray-docs_nav {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    width: @doxray-nav-width;\n    background: @doxray-color-paper-white;\n    overflow: hidden;\n    z-index: 0;\n}\n\n.doxray-docs_nav-scroll {\n    width: 100%;\n    height: 100%;\n    padding-right: 20px;\n    padding-bottom: 60px;\n    overflow-y: auto;\n    overflow-x: hidden;\n}",
+      "less": ".doxray-docs_nav {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    width: @doxray-nav-width;\n    background: @doxray-color-paper-white;\n    overflow: hidden;\n    z-index: 0;\n}\n\n.doxray-docs_nav-scroll {\n    width: 100%;\n    height: 100%;\n    padding: 20px 0 0 20px;\n    overflow-y: auto;\n    overflow-x: hidden;\n}",
       "filename": "doxray-docs.less",
       "slug": "doxray-docs_nav"
     },

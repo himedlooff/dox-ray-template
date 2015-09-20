@@ -84,26 +84,12 @@ label:
 */
 
 .doxray-toc_file-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    &__docs-nav {
-        padding: 20px;
-    }
-}
-
-
-/* doxray
-label:
-    .doxray-toc_file-list
-*/
-
-.doxray-toc_file-list-item {
     display: inline-block;
-    vertical-align: top;
     width: 220px;
-    margin: 0 (@doxray-margin - 4px) @doxray-margin-large 0;
+    margin: 0 @doxray-margin @doxray-margin-large 0;
+    padding: 0;
+    vertical-align: top;
+    list-style-type: none;
 
     &.is-collapsed {
         margin-bottom: @doxray-margin;
@@ -117,6 +103,17 @@ label:
         display: block;
         margin-bottom: 0;
     }
+}
+
+
+/* doxray
+label:
+    .doxray-toc_file-list
+*/
+
+.doxray-toc_file-list-item {
+    margin: 0;
+    padding: 0;
 }
 
 

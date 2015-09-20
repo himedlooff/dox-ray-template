@@ -84,7 +84,7 @@ this.PatternLibrary.initCollapsedTOCBtn = function(e) {
 
 this.PatternLibrary.toggleCollapsedTOC = function(el) {
     var checked = $(el).is(':checked');
-    $('.doxray-toc_file-list-item').toggleClass('is-collapsed', checked);
+    $('.doxray-toc_file-list').toggleClass('is-collapsed', checked);
 };
 
 this.PatternLibrary.handleToggleCollapsedTOCClick = function(e) {
