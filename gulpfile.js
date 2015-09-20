@@ -40,5 +40,9 @@ gulp.task('doxray', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['src/styles/*.less'], ['docs']);
+    gulp.watch([
+        'src/index.html',
+        'src/doxray-template.js',
+        'src/styles/*.less'
+    ], ['docs']);
 });
