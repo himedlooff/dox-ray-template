@@ -86,7 +86,7 @@ var Doxray = {
     },
     {
       "label": ".doxray-doc",
-      "less": ".doxray-doc {\n    padding: @doxray-margin-large;\n}\n\n.doxray-doc + .doxray-doc {\n    border-top: 1px solid @doxray-color-dirtier-white;\n}",
+      "less": ".doxray-doc {\n    padding: @doxray-margin-large;\n    overflow-x: hidden;\n}\n\n.doxray-doc + .doxray-doc {\n    border-top: 1px solid @doxray-color-dirtier-white;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-doc"
     },
@@ -188,7 +188,7 @@ var Doxray = {
     },
     {
       "label": ".doxray-doc-code_text",
-      "less": ".doxray-doc-code_text {\n    display: block;\n    margin: 0;\n    padding: @doxray-margin-large / 2;\n    background: @doxray-color-dirty-white;\n    font-size: @doxray-font-size-md;\n    line-height: 1.5;\n}",
+      "less": ".doxray-doc-code_text {\n    display: block;\n    margin: 0;\n    padding: @doxray-margin-large / 2;\n    background: @doxray-color-dirty-white;\n    font-size: @doxray-font-size-md;\n    line-height: 1.5;\n    white-space: pre-wrap;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-doc-code_text"
     },
@@ -287,7 +287,7 @@ var Doxray = {
     },
     {
       "label": ".doxray-docs_nav",
-      "less": ".doxray-docs_nav {\n    box-sizing: border-box;\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    width: @doxray-nav-width;\n    padding: 0 0 60px 0;\n    background: @doxray-color-paper-white;\n    overflow-y: auto;\n    z-index: 0;\n}",
+      "less": ".doxray-docs_nav {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    width: @doxray-nav-width;\n    background: @doxray-color-paper-white;\n    overflow: hidden;\n    z-index: 0;\n}\n\n.doxray-docs_nav-scroll {\n    width: 100%;\n    height: 100%;\n    padding-right: 20px;\n    padding-bottom: 60px;\n    overflow-y: auto;\n    overflow-x: hidden;\n}",
       "filename": "doxray-docs.less",
       "slug": "doxray-docs_nav"
     },
