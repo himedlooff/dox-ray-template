@@ -4,13 +4,7 @@ A handlebars.js template for [Doxray](https://github.com/himedlooff/doxray)
 
 [Demo](http://himedlooff.github.io/doxray-template/docs/)
 
-Table of contents screencap
-
-![Table of contents screencap](screencap-1.png)
-
-Example pattern screencap
-
-![Example pattern screencap](screencap-2.png)
+![Table of contents screencap](screencap.gif)
 
 ## Getting started
 
