@@ -35,14 +35,14 @@ markup: |
         <span class="doxray-title_brand">
             Doxray
         </span>
-        <span class="doxray-title_tagline">
-            <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1">
+        <span class="doxray-title_ribbon">
+            <span class="doxray-title_ribbon-item doxray-title_ribbon-item__1">
                 Pattern
             </span>
-            <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend">
+            <span class="doxray-title_ribbon-item doxray-title_ribbon-item__bend">
                 &nbsp;
             </span>
-            <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2">
+            <span class="doxray-title_ribbon-item doxray-title_ribbon-item__2">
                 Library
             </span>
         </span>
@@ -86,14 +86,14 @@ markup: |
 }
 /* doxray
 label:
-    .doxray-title_tagline
+    .doxray-title_ribbon
 description:
-    A CSS based ribbon effect to contain the 'Pattern Library' tagline.
+    A CSS based ribbon effect to contain the 'Pattern Library' ribbon.
 notes:
     - >
-        Rotates to counter the skew of `.doxray-title_tagline_ribbon` to make it look level.
+        Rotates to counter the skew of `.doxray-title_ribbon-item` to make it look level.
 */
-.doxray-title_tagline {
+.doxray-title_ribbon {
   position: relative;
   display: inline-block;
   perspective: 60px;
@@ -101,17 +101,17 @@ notes:
 }
 /* doxray
 label:
-    .doxray-title_tagline_ribbon
+    .doxray-title_ribbon-item
 description:
     Text with padding and skew to give it a ribbon effect.
 markup: |
-    <span class="doxray-title_tagline">
-        <span class="doxray-title_tagline_ribbon">
+    <span class="doxray-title_ribbon">
+        <span class="doxray-title_ribbon-item">
             Lorem ipsum
         </span>
     </span>
 */
-.doxray-title_tagline_ribbon {
+.doxray-title_ribbon-item {
   position: relative;
   display: inline-block;
   padding: 6px 10px 8px;
@@ -127,62 +127,62 @@ markup: |
 }
 /* doxray
 label:
-    .doxray-title_tagline_ribbon__1
+    .doxray-title_ribbon-item__1
 notes:
     - >
         Needs the highest `z-index` to place it above all ofther pieces of the
         ribbon.
 */
-.doxray-title_tagline_ribbon__1 {
+.doxray-title_ribbon-item__1 {
   z-index: 3;
 }
 /* doxray
 label:
-    .doxray-title_tagline_ribbon__2
+    .doxray-title_ribbon-item__2
 notes:
     - >
         Needs the lowest `z-index` to place it below all ofther pieces of the
         ribbon.
     - >
         Also needs negative left margin to pull it under
-        `.doxray-title_tagline_ribbon__1` and `.doxray-title_tagline_ribbon__bend`.
+        `.doxray-title_ribbon-item__1` and `.doxray-title_ribbon-item__bend`.
 markup: |
-    <span class="doxray-title_tagline">
-        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1">
+    <span class="doxray-title_ribbon">
+        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__1">
             Ribbon 1
         </span>
-        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2" style="background-color: red;">
+        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__2" style="background-color: red;">
             Ribbon 2
         </span>
     </span>
 */
-.doxray-title_tagline_ribbon__2 {
+.doxray-title_ribbon-item__2 {
   margin-left: -14px;
   padding-left: 14px;
   z-index: 1;
 }
 /* doxray
 label:
-    .doxray-title_tagline_ribbon__bend
+    .doxray-title_ribbon-item__bend
 description:
     The bent underside of the ribbon.
 notes:
     - >
         Needs `&nbsp;` to give it height.
 markup: |
-    <span class="doxray-title_tagline">
-        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1">
+    <span class="doxray-title_ribbon">
+        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__1">
             Ribbon 1
         </span>
-        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend" style="background-color: red;">
+        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__bend" style="background-color: red;">
             &nbsp;
         </span>
-        <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2">
+        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__2">
             Ribbon 2
         </span>
     </span>
 */
-.doxray-title_tagline_ribbon__bend {
+.doxray-title_ribbon-item__bend {
   position: relative;
   width: 8px;
   margin-left: -14px;
