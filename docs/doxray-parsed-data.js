@@ -290,7 +290,7 @@ var Doxray = {
     {
       "header": true,
       "description": "...",
-      "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_brand\">\n        Doxray\n    </span>\n    <span class=\"doxray-title_tagline\">\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1\">\n            <b class=\"doxray-title_tagline_p\">¶</b>attern\n        </span>\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend\">\n            &nbsp;\n        </span>\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2\">\n            Library\n        </span>\n    </span>\n</h1>\n",
+      "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_brand\">\n        Doxray\n    </span>\n    <span class=\"doxray-title_tagline\">\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1\">\n            Pattern\n        </span>\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend\">\n            &nbsp;\n        </span>\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2\">\n            Library\n        </span>\n    </span>\n</h1>\n",
       "less": "",
       "filename": "doxray-title.less"
     },
@@ -356,17 +356,9 @@ var Doxray = {
         "Needs `&nbsp;` to give it height.\n"
       ],
       "markup": "<span class=\"doxray-title_tagline\">\n    <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1\">\n        Ribbon 1\n    </span>\n    <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend\" style=\"background-color: red;\">\n        &nbsp;\n    </span>\n    <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2\">\n        Ribbon 2\n    </span>\n</span>\n",
-      "less": ".doxray-title_tagline_ribbon__bend {\n    position: relative;\n    width: 8px;\n    margin-left: -14px;\n    padding-left: 0;\n    padding-right: 0;\n    border-color: @doxray-color-shadow;\n    background: @doxray-color-shadow;\n    transform: skewY(-43deg);\n    z-index: 2;\n}",
+      "less": ".doxray-title_tagline_ribbon__bend {\n    position: relative;\n    width: 8px;\n    margin-left: -14px;\n    padding-left: 0;\n    padding-right: 0;\n    border-color: @doxray-color-gray;\n    background: @doxray-color-gray;\n    transform: skewY(-42deg) translateY(1px);\n    z-index: 2;\n}",
       "filename": "doxray-title.less",
       "slug": "doxray-title_tagline_ribbon__bend"
-    },
-    {
-      "label": ".doxray-title_tagline_p",
-      "description": "A reverse pilcrow to use as the 'P' in 'Pattern Library'.",
-      "markup": "<span class=\"doxray-title_tagline\">\n    <span class=\"doxray-title_tagline_ribbon\">\n        <b class=\"doxray-title_tagline_p\">¶</b>\n    </span>\n</span>\n",
-      "less": ".doxray-title_tagline_p {\n    display: inline-block;\n    transform: scaleX(-1) translateX(.75px);\n}",
-      "filename": "doxray-title.less",
-      "slug": "doxray-title_tagline_p"
     },
     {
       "header": true,

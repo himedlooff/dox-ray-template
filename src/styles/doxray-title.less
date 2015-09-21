@@ -10,7 +10,7 @@ markup: |
         </span>
         <span class="doxray-title_tagline">
             <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1">
-                <b class="doxray-title_tagline_p">¶</b>attern
+                Pattern
             </span>
             <span class="doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend">
                 &nbsp;
@@ -182,27 +182,8 @@ markup: |
     margin-left: -14px;
     padding-left: 0;
     padding-right: 0;
-    border-color: @doxray-color-shadow;
-    background: @doxray-color-shadow;
-    transform: skewY(-43deg);
+    border-color: @doxray-color-gray;
+    background: @doxray-color-gray;
+    transform: skewY(-42deg) translateY(1px);
     z-index: 2;
-}
-
-
-/* doxray
-label:
-    .doxray-title_tagline_p
-description:
-    A reverse pilcrow to use as the 'P' in 'Pattern Library'.
-markup: |
-    <span class="doxray-title_tagline">
-        <span class="doxray-title_tagline_ribbon">
-            <b class="doxray-title_tagline_p">¶</b>
-        </span>
-    </span>
-*/
-
-.doxray-title_tagline_p {
-    display: inline-block;
-    transform: scaleX(-1) translateX(.75px);
 }
