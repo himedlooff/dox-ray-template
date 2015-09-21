@@ -283,27 +283,12 @@ markup: |
 label:
     .doxray-toc_header
 markup: |
-    <h1 class="doxray-toc_header">
-        Header
-    </h1>
+    <header class="doxray-toc_header">...</header>
 */
 .doxray-toc_header {
   padding: 72px;
   border-bottom: 1px solid #f0f0f0;
   background: #fdfdfd;
-}
-/* doxray
-label:
-    .doxray-toc_title
-markup: |
-    <header class="doxray-toc_title"></header>
-*/
-.doxray-toc_title {
-  margin: 0;
-  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
-  font-size: 42px;
-  font-weight: 300;
-  line-height: 1.2;
 }
 /* doxray
 label:

@@ -29,17 +29,10 @@ var Doxray = {
     },
     {
       "label": ".doxray-toc_header",
-      "markup": "<h1 class=\"doxray-toc_header\">\n    Header\n</h1>\n",
+      "markup": "<header class=\"doxray-toc_header\">...</header>\n",
       "less": ".doxray-toc_header {\n    padding: @doxray-margin-large;\n    border-bottom: 1px solid @doxray-color-dirtier-white;\n    background: @doxray-color-paper-white;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_header"
-    },
-    {
-      "label": ".doxray-toc_title",
-      "markup": "<header class=\"doxray-toc_title\"></header>\n",
-      "less": ".doxray-toc_title {\n    margin: 0;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    line-height: 1.2;\n}",
-      "filename": "doxray-template.less",
-      "slug": "doxray-toc_title"
     },
     {
       "label": ".doxray-toc_body",
