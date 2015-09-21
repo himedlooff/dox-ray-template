@@ -1,6 +1,6 @@
 # Doxray-template
 
-<img src="logo.png" style="width: 200px;" alt="">
+<img src="logo.png" width="200" alt="">
 
 A handlebars.js template for [Doxray](https://github.com/himedlooff/doxray)
 
