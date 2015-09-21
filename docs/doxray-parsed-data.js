@@ -43,7 +43,7 @@ var Doxray = {
     },
     {
       "label": ".doxray-toc_body",
-      "less": ".doxray-toc_body {\n    position: relative;\n    padding: @doxray-margin-large;\n}",
+      "less": ".doxray-toc_body {\n    position: relative;\n    padding: @doxray-margin-large;\n    text-align: center;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_body"
     },
@@ -55,7 +55,7 @@ var Doxray = {
     },
     {
       "label": ".doxray-toc_file-list",
-      "less": ".doxray-toc_file-list {\n    display: inline-block;\n    width: 220px;\n    margin: 0 @doxray-margin @doxray-margin-large 0;\n    padding: 0;\n    vertical-align: top;\n    list-style-type: none;\n\n    &.is-collapsed {\n        margin-bottom: @doxray-margin;\n    }\n\n    &.is-collapsed .doxray-link {\n        display: none;\n    }\n\n    &.is-collapsed .doxray-link__file {\n        display: block;\n        margin-bottom: 0;\n    }\n}",
+      "less": ".doxray-toc_file-list {\n    display: inline-block;\n    width: 220px;\n    margin: 0 @doxray-margin @doxray-margin-large 0;\n    padding: 0;\n    vertical-align: top;\n    list-style-type: none;\n    text-align: left;\n\n    &.is-collapsed {\n        margin-bottom: @doxray-margin;\n    }\n\n    &.is-collapsed .doxray-link {\n        display: none;\n    }\n\n    &.is-collapsed .doxray-link__file {\n        display: block;\n        margin-bottom: 0;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_file-list"
     },
