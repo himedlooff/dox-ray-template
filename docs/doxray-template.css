@@ -482,8 +482,22 @@ label:
     .doxray-doc
 */
 .doxray-doc {
-  padding: 72px;
+  position: relative;
+  padding: 72px 108px;
   overflow-x: hidden;
+}
+.doxray-doc:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 14px solid #f0f0f0;
+  border-right: 14px solid transparent;
+  border-left: 14px solid transparent;
+  transform: rotate(135deg) translate(-50%, -100%);
+  transform-origin: top left;
 }
 .doxray-doc + .doxray-doc {
   border-top: 1px solid #f0f0f0;
@@ -493,13 +507,12 @@ label:
     .doxray-doc-label
 markup: |
     <h1 class="doxray-doc-label">
-        <a class="doxray-doc-label_link" href="#0">
-            Label
-        </a>
+        Lorem ipsum
     </h1>
 */
 .doxray-doc-label {
   margin: 0 0 18px;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
   font-size: 30px;
   font-weight: 600;
 }
@@ -509,7 +522,7 @@ label:
 markup: |
     <h1 class="doxray-doc-label">
         <a class="doxray-doc-label_link" href="#0">
-            Doc Label Link
+            Lorem ipsum
         </a>
     </h1>
 */
@@ -519,7 +532,6 @@ markup: |
 .doxray-doc-label_link:hover,
 .doxray-doc-label_link:focus {
   color: #474646;
-  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
   text-decoration: none;
   outline: 0;
 }
@@ -603,7 +615,7 @@ markup: |
   left: 0;
   display: inline-block;
   margin-right: .25em;
-  color: #f0f0f0;
+  color: #474646;
 }
 .doxray-doc-note p {
   margin: 18px 0 0;

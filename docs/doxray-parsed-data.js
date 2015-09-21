@@ -88,21 +88,21 @@ var Doxray = {
     },
     {
       "label": ".doxray-doc",
-      "less": ".doxray-doc {\n    padding: @doxray-margin-lg;\n    overflow-x: hidden;\n}\n\n.doxray-doc + .doxray-doc {\n    border-top: 1px solid @doxray-color-dirtier-white;\n}",
+      "less": ".doxray-doc {\n    position: relative;\n    padding: @doxray-margin-lg (@doxray-margin-lg + @doxray-margin-md);\n    overflow-x: hidden;\n\n    &:before {\n        content: \"\";\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 0;\n        height: 0;\n        border-top: 14px solid @doxray-color-dirtier-white;\n        border-right: 14px solid transparent;\n        border-left: 14px solid transparent;\n        transform: rotate(135deg) translate(-50%, -100%);\n        transform-origin: top left;\n    }\n}\n\n.doxray-doc + .doxray-doc {\n    border-top: 1px solid @doxray-color-dirtier-white;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-doc"
     },
     {
       "label": ".doxray-doc-label",
-      "markup": "<h1 class=\"doxray-doc-label\">\n    <a class=\"doxray-doc-label_link\" href=\"#0\">\n        Label\n    </a>\n</h1>\n",
-      "less": ".doxray-doc-label {\n    margin: 0 0 @doxray-margin-sm;\n    font-size: @doxray-font-size-lg;\n    font-weight: @doxray-font-weight-demi;\n}",
+      "markup": "<h1 class=\"doxray-doc-label\">\n    Lorem ipsum\n</h1>\n",
+      "less": ".doxray-doc-label {\n    margin: 0 0 @doxray-margin-sm;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-lg;\n    font-weight: @doxray-font-weight-demi;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-doc-label"
     },
     {
       "label": ".doxray-doc-label_link",
-      "markup": "<h1 class=\"doxray-doc-label\">\n    <a class=\"doxray-doc-label_link\" href=\"#0\">\n        Doc Label Link\n    </a>\n</h1>\n",
-      "less": ".doxray-doc-label_link {\n    &,\n    &:link,\n    &:visited,\n    &:hover,\n    &:focus {\n        color: @doxray-color-gray;\n        font-family: @doxray-font-family-default;\n        text-decoration: none;\n        outline: 0;\n    }\n}",
+      "markup": "<h1 class=\"doxray-doc-label\">\n    <a class=\"doxray-doc-label_link\" href=\"#0\">\n        Lorem ipsum\n    </a>\n</h1>\n",
+      "less": ".doxray-doc-label_link {\n    &,\n    &:link,\n    &:visited,\n    &:hover,\n    &:focus {\n        color: @doxray-color-gray;\n        text-decoration: none;\n        outline: 0;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-doc-label_link"
     },
@@ -130,7 +130,7 @@ var Doxray = {
     {
       "label": ".doxray-doc-note",
       "markup": "<div class=\"doxray-doc-note\">\n    <p>A note</p>\n</div>\n",
-      "less": ".doxray-doc-note {\n    position: relative;\n    max-width: 50em;\n    margin: @doxray-margin-sm 0;\n    padding-left: 1.3em;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-md;\n    font-weight: @doxray-font-weight-normal;\n\n    &:before {\n        content: \"●\";\n        position: absolute;\n        left: 0;\n        display: inline-block;\n        margin-right: .25em;\n        color: @doxray-color-dirtier-white;\n    }\n\n    p {\n        margin: @doxray-margin-sm 0 0;\n    }\n\n    code {\n        display: inline-block;\n        padding: 3px 5px;\n        border-radius: 5px;\n        background: @doxray-color-dirty-white;\n        color: @doxray-color-gray;\n        font-family: @doxray-font-family-code;\n        font-size: .9em;\n    }\n}",
+      "less": ".doxray-doc-note {\n    position: relative;\n    max-width: 50em;\n    margin: @doxray-margin-sm 0;\n    padding-left: 1.3em;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-md;\n    font-weight: @doxray-font-weight-normal;\n\n    &:before {\n        content: \"●\";\n        position: absolute;\n        left: 0;\n        display: inline-block;\n        margin-right: .25em;\n        color: @doxray-color-gray;\n    }\n\n    p {\n        margin: @doxray-margin-sm 0 0;\n    }\n\n    code {\n        display: inline-block;\n        padding: 3px 5px;\n        border-radius: 5px;\n        background: @doxray-color-dirty-white;\n        color: @doxray-color-gray;\n        font-family: @doxray-font-family-code;\n        font-size: .9em;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-doc-note"
     },
