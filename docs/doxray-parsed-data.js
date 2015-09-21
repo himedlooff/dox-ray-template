@@ -289,10 +289,11 @@ var Doxray = {
     },
     {
       "header": true,
-      "description": "...",
+      "label": "Demo",
       "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_brand\">\n        Doxray\n    </span>\n    <span class=\"doxray-title_tagline\">\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__1\">\n            Pattern\n        </span>\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__bend\">\n            &nbsp;\n        </span>\n        <span class=\"doxray-title_tagline_ribbon doxray-title_tagline_ribbon__2\">\n            Library\n        </span>\n    </span>\n</h1>\n",
       "less": "",
-      "filename": "doxray-title.less"
+      "filename": "doxray-title.less",
+      "slug": "demo"
     },
     {
       "label": ".doxray-title",
