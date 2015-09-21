@@ -62,7 +62,7 @@ markup: |
 */
 
 .doxray-toc_header {
-    padding: @doxray-margin-large;
+    padding: @doxray-margin-lg;
     border-bottom: 1px solid @doxray-color-dirtier-white;
 }
 
@@ -74,7 +74,7 @@ label:
 
 .doxray-toc_body {
     position: relative;
-    padding: @doxray-margin-large;
+    padding: @doxray-margin-lg;
     text-align: center;
 }
 
@@ -86,10 +86,11 @@ label:
 
 .doxray-toc_collapsed-view-btn {
     position: absolute;
-    bottom: @doxray-margin-large / 3;
-    left: @doxray-margin-large;
+    bottom: @doxray-margin-md;
+    left: 50%;
     font-family: @doxray-font-family-default;
     font-size: 12px;
+    transform: translate(-50%, 50%);
 }
 
 
@@ -101,14 +102,14 @@ label:
 .doxray-toc_file-list {
     display: inline-block;
     width: 220px;
-    margin: 0 @doxray-margin @doxray-margin-large 0;
+    margin: 0 @doxray-margin-md @doxray-margin-lg 0;
     padding: 0;
     vertical-align: top;
     list-style-type: none;
     text-align: left;
 
     &.is-collapsed {
-        margin-bottom: @doxray-margin;
+        margin-bottom: @doxray-margin-sm;
     }
 
     &.is-collapsed .doxray-link {
@@ -160,8 +161,8 @@ markup: |
 
     &:hover,
     &:focus {
-        border-color: @doxray-color-gray;
-        background: @doxray-color-gray;
+        border-color: @doxray-color-shadow;
+        background: @doxray-color-shadow;
         color: @doxray-color-paper-white;
     }
 
@@ -187,8 +188,34 @@ markup: |
         margin: 0 0 .5em;
         padding-top: 8px;
         padding-bottom: 8px;
-        border: 1px solid @doxray-color-gray;
+        border-color: @doxray-color-gray;
+        background: @doxray-color-gray;
+        color: @doxray-color-paper-white;
         font-family: @doxray-font-family-code;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: @doxray-color-shadow;
+        background: @doxray-color-shadow;
+        color: @doxray-color-paper-white;
+    }
+
+    &.is-selected {
+        &,
+        &:link,
+        &:visited {
+            border-color: @doxray-color-gray;
+            background: @doxray-color-gray;
+            color: @doxray-color-paper-white;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: @doxray-color-shadow;
+            background: @doxray-color-shadow;
+            color: @doxray-color-paper-white;
+        }
     }
 }
 
@@ -235,7 +262,7 @@ label:
 */
 
 .doxray-doc {
-    padding: @doxray-margin-large;
+    padding: @doxray-margin-lg;
     overflow-x: hidden;
 }
 
@@ -256,7 +283,7 @@ markup: |
 */
 
 .doxray-doc-label {
-    margin: 0 0 @doxray-margin;
+    margin: 0 0 @doxray-margin-sm;
     font-size: @doxray-font-size-lg;
     font-weight: @doxray-font-weight-demi;
 }
@@ -334,13 +361,13 @@ markup: |
 
 .doxray-doc-description {
     max-width: 50em;
-    margin: @doxray-margin 0;
+    margin: @doxray-margin-sm 0;
     font-family: @doxray-font-family-default;
     font-size: @doxray-font-size-lg - 4px;
     font-weight: @doxray-font-weight-normal;
 
     p {
-        margin: @doxray-margin 0 0;
+        margin: @doxray-margin-sm 0 0;
     }
 
     code {
@@ -367,7 +394,7 @@ markup: |
 .doxray-doc-note {
     position: relative;
     max-width: 50em;
-    margin: @doxray-margin 0;
+    margin: @doxray-margin-sm 0;
     padding-left: 1.3em;
     font-family: @doxray-font-family-default;
     font-size: @doxray-font-size-md;
@@ -383,7 +410,7 @@ markup: |
     }
 
     p {
-        margin: @doxray-margin 0 0;
+        margin: @doxray-margin-sm 0 0;
     }
 
     code {
@@ -414,7 +441,7 @@ markup: |
     &:focus,
     &:hover,
     &:visited {
-        margin: @doxray-margin 0;
+        margin: @doxray-margin-sm 0;
         font-family: @doxray-font-family-default;
         font-size: @doxray-font-size-md;
         color: @doxray-color-blue;
@@ -437,7 +464,7 @@ markup: |
 */
 
 .doxray-doc-markup {
-    margin: ((@doxray-margin-large / 2) + (@doxray-margin-large / 4)) (@doxray-margin-large / 2 * -1) (@doxray-margin-large / 2);
+    margin: ((@doxray-margin-lg / 2) + (@doxray-margin-lg / 4)) (@doxray-margin-lg / 2 * -1) (@doxray-margin-lg / 2);
     box-shadow: 0 0 6px @doxray-color-shadow;
 }
 
@@ -462,7 +489,7 @@ markup: |
 
 .doxray-doc-markup_rendered {
     display: inline-block;
-    padding: @doxray-margin-large;
+    padding: @doxray-margin-lg;
     margin-right: -3.75px;
 }
 
@@ -529,7 +556,7 @@ label:
 .doxray-doc-code_text {
     display: block;
     margin: 0;
-    padding: @doxray-margin-large / 2;
+    padding: @doxray-margin-lg / 2;
     background: @doxray-color-dirty-white;
     font-size: @doxray-font-size-md;
     line-height: 1.5;
@@ -626,7 +653,7 @@ blockMarkup:
     position: relative;
     top: -16px;
     height: 0;
-    padding-left: @doxray-margin-large * .5;
+    padding-left: @doxray-margin-lg * .5;
 }
 
 .doxray-tabs_btn {

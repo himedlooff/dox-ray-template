@@ -19,7 +19,7 @@ label:
     top: 0;
     bottom: 0;
     left: 0;
-    width: @doxray-nav-width;
+    width: @doxray-nav-width-outer;
     border-right: 1px solid @doxray-color-dirtier-white;
     overflow: hidden;
     z-index: 0;
@@ -28,17 +28,17 @@ label:
 .doxray-docs_nav-scroll {
     width: 100%;
     height: 100%;
-    padding: 20px 0 0 20px;
+    padding: @doxray-margin-md 0 0 @doxray-margin-md;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 .doxray-docs_nav-title {
-    padding: 30px 0 50px;
+    margin-bottom: @doxray-margin-md;
 }
 
 .doxray-docs_nav-content {
-    width: @doxray-nav-width - 40px;
+    width: @doxray-nav-width-inner;
 }
 
 
@@ -49,6 +49,6 @@ label:
 
 .doxray-docs_patterns {
     position: relative;
-    margin-left: @doxray-nav-width;
+    margin-left: @doxray-nav-width-outer;
     z-index: 1;
 }
