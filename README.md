@@ -1,10 +1,12 @@
 # Doxray-template
 
+![Logo](logo.png)
+
 A handlebars.js template for [Doxray](https://github.com/himedlooff/doxray)
 
 [Demo](http://himedlooff.github.io/doxray-template/docs/)
 
-![Table of contents screencap](screencap.gif)
+![Animated screencap](screencap.gif)
 
 ## Getting started
 
