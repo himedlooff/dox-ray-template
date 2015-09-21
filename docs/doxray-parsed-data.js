@@ -8,7 +8,7 @@ var Doxray = {
         "All Doxray classes must be namespaced with `doxray` in order to avoid accidentally overriding the users' stylesheet.\n",
         "This class must be added to the `<body>` tag.\n"
       ],
-      "less": ".doxray {\n    margin: 0;\n    padding: 0;\n}",
+      "less": ".doxray {\n    margin: 0;\n    padding: 0;\n    background: @doxray-color-clean-white;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray"
     },
@@ -30,7 +30,7 @@ var Doxray = {
     {
       "label": ".doxray-toc_header",
       "markup": "<header class=\"doxray-toc_header\">...</header>\n",
-      "less": ".doxray-toc_header {\n    padding: @doxray-margin-large;\n    border-bottom: 1px solid @doxray-color-dirtier-white;\n    background: @doxray-color-paper-white;\n}",
+      "less": ".doxray-toc_header {\n    padding: @doxray-margin-large;\n    border-bottom: 1px solid @doxray-color-dirtier-white;\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_header"
     },
@@ -61,14 +61,14 @@ var Doxray = {
     {
       "label": ".doxray-link",
       "markup": "<a class=\"doxray-link\" href=\"#0\">\n    A simple blocky link\n</a>\n",
-      "less": ".doxray-link {\n    &,\n    &:link,\n    &:visited {\n        position: relative;\n        display: block;\n        margin: 0;\n        padding: 6px 12px;\n        border: 0;\n        background: transparent;\n        font-family: @doxray-font-family-default;\n        font-size: @doxray-font-size-sm;\n        color: @doxray-color-gray;\n        text-decoration: none;\n    }\n\n    &:hover,\n    &:focus {\n        background: @doxray-color-dirty-white;\n    }\n\n    &:focus {\n        outline: 0;\n    }\n}",
+      "less": ".doxray-link {\n    &,\n    &:link,\n    &:visited {\n        position: relative;\n        display: block;\n        margin: 0;\n        padding: 6px 12px;\n        border: 1px solid @doxray-color-clean-white;\n        background: @doxray-color-clean-white;\n        font-family: @doxray-font-family-default;\n        font-size: @doxray-font-size-sm;\n        color: @doxray-color-gray;\n        text-decoration: none;\n    }\n\n    &:hover,\n    &:focus {\n        border-color: @doxray-color-gray;\n        background: @doxray-color-gray;\n        color: @doxray-color-paper-white;\n    }\n\n    &:focus {\n        outline: 0;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-link"
     },
     {
       "label": ".doxray-link__file",
       "markup": "<a class=\"doxray-link doxray-link__file\" href=\"#0\">\n    filename.ext\n</a>\n",
-      "less": ".doxray-link__file {\n    &,\n    &:link,\n    &:visited {\n        margin: 0 0 .5em;\n        padding-top: 8px;\n        padding-bottom: 8px;\n        background: @doxray-color-dirty-white;\n        font-family: @doxray-font-family-code;\n    }\n\n    &:hover,\n    &:focus {\n        background: @doxray-color-dirtier-white;\n    }\n}",
+      "less": ".doxray-link__file {\n    &,\n    &:link,\n    &:visited {\n        margin: 0 0 .5em;\n        padding-top: 8px;\n        padding-bottom: 8px;\n        border: 1px solid @doxray-color-gray;\n        font-family: @doxray-font-family-code;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-link__file"
     },
@@ -363,13 +363,13 @@ var Doxray = {
     },
     {
       "label": ".doxray-docs_nav",
-      "less": ".doxray-docs_nav {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    width: @doxray-nav-width;\n    background: @doxray-color-paper-white;\n    overflow: hidden;\n    z-index: 0;\n}\n\n.doxray-docs_nav-scroll {\n    width: 100%;\n    height: 100%;\n    padding: 20px 0 0 20px;\n    overflow-y: auto;\n    overflow-x: hidden;\n}\n\n.doxray-docs_nav-title {\n    padding: 30px 0 50px;\n}\n\n.doxray-docs_nav-content {\n    width: @doxray-nav-width - 40px;\n}",
+      "less": ".doxray-docs_nav {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    width: @doxray-nav-width;\n    border-right: 1px solid @doxray-color-dirtier-white;\n    overflow: hidden;\n    z-index: 0;\n}\n\n.doxray-docs_nav-scroll {\n    width: 100%;\n    height: 100%;\n    padding: 20px 0 0 20px;\n    overflow-y: auto;\n    overflow-x: hidden;\n}\n\n.doxray-docs_nav-title {\n    padding: 30px 0 50px;\n}\n\n.doxray-docs_nav-content {\n    width: @doxray-nav-width - 40px;\n}",
       "filename": "doxray-docs.less",
       "slug": "doxray-docs_nav"
     },
     {
       "label": ".doxray-docs_patterns",
-      "less": ".doxray-docs_patterns {\n    position: relative;\n    margin-left: @doxray-nav-width;\n    background: @doxray-color-clean-white;\n    box-shadow: 0 0 4px @doxray-color-shadow;\n    z-index: 1;\n}",
+      "less": ".doxray-docs_patterns {\n    position: relative;\n    margin-left: @doxray-nav-width;\n    z-index: 1;\n}",
       "filename": "doxray-docs.less",
       "slug": "doxray-docs_patterns"
     }

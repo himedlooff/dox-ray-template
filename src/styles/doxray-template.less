@@ -20,6 +20,7 @@ notes:
 .doxray {
     margin: 0;
     padding: 0;
+    background: @doxray-color-clean-white;
 }
 
 
@@ -63,7 +64,6 @@ markup: |
 .doxray-toc_header {
     padding: @doxray-margin-large;
     border-bottom: 1px solid @doxray-color-dirtier-white;
-    background: @doxray-color-paper-white;
 }
 
 
@@ -150,8 +150,8 @@ markup: |
         display: block;
         margin: 0;
         padding: 6px 12px;
-        border: 0;
-        background: transparent;
+        border: 1px solid @doxray-color-clean-white;
+        background: @doxray-color-clean-white;
         font-family: @doxray-font-family-default;
         font-size: @doxray-font-size-sm;
         color: @doxray-color-gray;
@@ -160,7 +160,9 @@ markup: |
 
     &:hover,
     &:focus {
-        background: @doxray-color-dirty-white;
+        border-color: @doxray-color-gray;
+        background: @doxray-color-gray;
+        color: @doxray-color-paper-white;
     }
 
     &:focus {
@@ -185,13 +187,8 @@ markup: |
         margin: 0 0 .5em;
         padding-top: 8px;
         padding-bottom: 8px;
-        background: @doxray-color-dirty-white;
+        border: 1px solid @doxray-color-gray;
         font-family: @doxray-font-family-code;
-    }
-
-    &:hover,
-    &:focus {
-        background: @doxray-color-dirtier-white;
     }
 }
 
