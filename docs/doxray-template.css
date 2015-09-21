@@ -211,7 +211,7 @@ markup: |
 label:
     .doxray-tagline
 description:
-    ...
+    Text to clarify the purpose of the page.
 markup: |
     <p class="doxray-title_tagline">
         A documented collection of the HTML and CSS patterns used in the Doxray template.
