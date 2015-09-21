@@ -31,7 +31,7 @@ header:
 label:
     Demo
 markup: |
-    <h1 class="doxray-title">
+    <header class="doxray-title">
         <span class="doxray-title_brand">
             Doxray
         </span>
@@ -46,7 +46,7 @@ markup: |
                 Library
             </span>
         </span>
-    </h1>
+    </header>
 */
 /* doxray
 label:
@@ -76,7 +76,7 @@ markup: |
 */
 .doxray-title_brand {
   display: block;
-  margin: 0 0 .2em 0;
+  margin: 0 0 12px 0;
   color: #474646;
   font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
   font-size: 42px;
@@ -92,12 +92,26 @@ description:
 notes:
     - >
         Rotates to counter the skew of `.doxray-title_ribbon-item` to make it look level.
+    - >
+        Also adds the centered double bordered bar.
 */
 .doxray-title_ribbon {
   position: relative;
   display: inline-block;
   perspective: 60px;
   transform: rotate(8deg);
+}
+.doxray-title_ribbon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  bottom: 0;
+  left: -20px;
+  height: 3px;
+  margin: auto;
+  border-top: 3px double #6e6c6c;
+  transform: rotate(-8deg);
 }
 /* doxray
 label:
@@ -119,8 +133,8 @@ markup: |
   background: #fdfdfd;
   color: #474646;
   font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
-  font-size: 10px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.2;
   transform: skewY(-8deg);
@@ -190,8 +204,32 @@ markup: |
   padding-right: 0;
   border-color: #474646;
   background: #474646;
-  transform: skewY(-42deg) translateY(1px);
+  transform: skewY(-46deg) translateY(0px);
   z-index: 2;
+}
+/* doxray
+label:
+    .doxray-tagline
+description:
+    ...
+markup: |
+    <p class="doxray-title_tagline">
+        A documented collection of the HTML and CSS patterns used in the Doxray template.
+    </p>
+*/
+.doxray-title_tagline {
+  display: block;
+  max-width: 220px;
+  margin: 18px auto 0;
+  padding: 0 5px;
+  color: #6e6c6c;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 1.38;
+  text-align: just;
 }
 /* doxray
 header:

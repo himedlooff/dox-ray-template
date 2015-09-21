@@ -4,7 +4,7 @@ header:
 label:
     Demo
 markup: |
-    <h1 class="doxray-title">
+    <header class="doxray-title">
         <span class="doxray-title_brand">
             Doxray
         </span>
@@ -19,7 +19,7 @@ markup: |
                 Library
             </span>
         </span>
-    </h1>
+    </header>
 */
 
 
@@ -55,7 +55,7 @@ markup: |
 
 .doxray-title_brand {
     display: block;
-    margin: 0 0 .2em 0;
+    margin: 0 0 12px 0;
     color: @doxray-color-gray;
     font-family: @doxray-font-family-default;
     font-size: @doxray-font-size-xlg;
@@ -73,6 +73,8 @@ description:
 notes:
     - >
         Rotates to counter the skew of `.doxray-title_ribbon-item` to make it look level.
+    - >
+        Also adds the centered double bordered bar.
 */
 
 .doxray-title_ribbon {
@@ -80,6 +82,19 @@ notes:
     display: inline-block;
     perspective: 60px;
     transform: rotate(8deg);
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -20px;
+        bottom: 0;
+        left: -20px;
+        height: 3px;
+        margin: auto;
+        border-top: 3px double @doxray-color-shadow;
+        transform: rotate(-8deg);
+    }
 }
 
 
@@ -104,8 +119,8 @@ markup: |
     background: @doxray-color-paper-white;
     color: @doxray-color-gray;
     font-family: @doxray-font-family-default;
-    font-size: 10px;
-    font-weight: @doxray-font-weight-normal;
+    font-size: 12px;
+    font-weight: @doxray-font-weight-demi;
     letter-spacing: 1px;
     line-height: 1.2;
     transform: skewY(-8deg);
@@ -184,6 +199,33 @@ markup: |
     padding-right: 0;
     border-color: @doxray-color-gray;
     background: @doxray-color-gray;
-    transform: skewY(-42deg) translateY(1px);
+    transform: skewY(-46deg) translateY(0px);
     z-index: 2;
+}
+
+
+/* doxray
+label:
+    .doxray-tagline
+description:
+    ...
+markup: |
+    <p class="doxray-title_tagline">
+        A documented collection of the HTML and CSS patterns used in the Doxray template.
+    </p>
+*/
+
+.doxray-title_tagline {
+    display: block;
+    max-width: 220px;
+    margin: 18px auto 0;
+    padding: 0 5px;
+    color: @doxray-color-shadow;
+    font-family: @doxray-font-family-default;
+    font-size: 12px;
+    font-weight: @doxray-font-weight-light;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 1.38;
+    text-align: just;
 }

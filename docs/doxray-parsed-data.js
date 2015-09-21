@@ -283,7 +283,7 @@ var Doxray = {
     {
       "header": true,
       "label": "Demo",
-      "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_brand\">\n        Doxray\n    </span>\n    <span class=\"doxray-title_ribbon\">\n        <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__1\">\n            Pattern\n        </span>\n        <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__bend\">\n            &nbsp;\n        </span>\n        <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__2\">\n            Library\n        </span>\n    </span>\n</h1>\n",
+      "markup": "<header class=\"doxray-title\">\n    <span class=\"doxray-title_brand\">\n        Doxray\n    </span>\n    <span class=\"doxray-title_ribbon\">\n        <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__1\">\n            Pattern\n        </span>\n        <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__bend\">\n            &nbsp;\n        </span>\n        <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__2\">\n            Library\n        </span>\n    </span>\n</header>\n",
       "less": "",
       "filename": "doxray-title.less",
       "slug": "demo"
@@ -301,7 +301,7 @@ var Doxray = {
       "label": ".doxray-title_brand",
       "description": "The brand that is using the pattern library. This would get replaced by whoever is using the template.",
       "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_brand\">\n        Doxray\n    </span>\n</h1>\n",
-      "less": ".doxray-title_brand {\n    display: block;\n    margin: 0 0 .2em 0;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    letter-spacing: -.03em;\n    line-height: 1.2;\n}",
+      "less": ".doxray-title_brand {\n    display: block;\n    margin: 0 0 12px 0;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    letter-spacing: -.03em;\n    line-height: 1.2;\n}",
       "filename": "doxray-title.less",
       "slug": "doxray-title_brand"
     },
@@ -309,9 +309,10 @@ var Doxray = {
       "label": ".doxray-title_ribbon",
       "description": "A CSS based ribbon effect to contain the 'Pattern Library' ribbon.",
       "notes": [
-        "Rotates to counter the skew of `.doxray-title_ribbon-item` to make it look level.\n"
+        "Rotates to counter the skew of `.doxray-title_ribbon-item` to make it look level.\n",
+        "Also adds the centered double bordered bar.\n"
       ],
-      "less": ".doxray-title_ribbon {\n    position: relative;\n    display: inline-block;\n    perspective: 60px;\n    transform: rotate(8deg);\n}",
+      "less": ".doxray-title_ribbon {\n    position: relative;\n    display: inline-block;\n    perspective: 60px;\n    transform: rotate(8deg);\n\n    &:before {\n        content: \"\";\n        position: absolute;\n        top: 0;\n        right: -20px;\n        bottom: 0;\n        left: -20px;\n        height: 3px;\n        margin: auto;\n        border-top: 3px double @doxray-color-shadow;\n        transform: rotate(-8deg);\n    }\n}",
       "filename": "doxray-title.less",
       "slug": "doxray-title_ribbon"
     },
@@ -319,7 +320,7 @@ var Doxray = {
       "label": ".doxray-title_ribbon-item",
       "description": "Text with padding and skew to give it a ribbon effect.",
       "markup": "<span class=\"doxray-title_ribbon\">\n    <span class=\"doxray-title_ribbon-item\">\n        Lorem ipsum\n    </span>\n</span>\n",
-      "less": ".doxray-title_ribbon-item {\n    position: relative;\n    display: inline-block;\n    padding: 6px 10px 8px;\n    border: 1px solid @doxray-color-gray;\n    background: @doxray-color-paper-white;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: 10px;\n    font-weight: @doxray-font-weight-normal;\n    letter-spacing: 1px;\n    line-height: 1.2;\n    transform: skewY(-8deg);\n}",
+      "less": ".doxray-title_ribbon-item {\n    position: relative;\n    display: inline-block;\n    padding: 6px 10px 8px;\n    border: 1px solid @doxray-color-gray;\n    background: @doxray-color-paper-white;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: 12px;\n    font-weight: @doxray-font-weight-demi;\n    letter-spacing: 1px;\n    line-height: 1.2;\n    transform: skewY(-8deg);\n}",
       "filename": "doxray-title.less",
       "slug": "doxray-title_ribbon-item"
     },
@@ -350,9 +351,17 @@ var Doxray = {
         "Needs `&nbsp;` to give it height.\n"
       ],
       "markup": "<span class=\"doxray-title_ribbon\">\n    <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__1\">\n        Ribbon 1\n    </span>\n    <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__bend\" style=\"background-color: red;\">\n        &nbsp;\n    </span>\n    <span class=\"doxray-title_ribbon-item doxray-title_ribbon-item__2\">\n        Ribbon 2\n    </span>\n</span>\n",
-      "less": ".doxray-title_ribbon-item__bend {\n    position: relative;\n    width: 8px;\n    margin-left: -14px;\n    padding-left: 0;\n    padding-right: 0;\n    border-color: @doxray-color-gray;\n    background: @doxray-color-gray;\n    transform: skewY(-42deg) translateY(1px);\n    z-index: 2;\n}",
+      "less": ".doxray-title_ribbon-item__bend {\n    position: relative;\n    width: 8px;\n    margin-left: -14px;\n    padding-left: 0;\n    padding-right: 0;\n    border-color: @doxray-color-gray;\n    background: @doxray-color-gray;\n    transform: skewY(-46deg) translateY(0px);\n    z-index: 2;\n}",
       "filename": "doxray-title.less",
       "slug": "doxray-title_ribbon-item__bend"
+    },
+    {
+      "label": ".doxray-tagline",
+      "description": "...",
+      "markup": "<p class=\"doxray-title_tagline\">\n    A documented collection of the HTML and CSS patterns used in the Doxray template.\n</p>\n",
+      "less": ".doxray-title_tagline {\n    display: block;\n    max-width: 220px;\n    margin: 18px auto 0;\n    padding: 0 5px;\n    color: @doxray-color-shadow;\n    font-family: @doxray-font-family-default;\n    font-size: 12px;\n    font-weight: @doxray-font-weight-light;\n    font-style: italic;\n    letter-spacing: 1px;\n    line-height: 1.38;\n    text-align: just;\n}",
+      "filename": "doxray-title.less",
+      "slug": "doxray-tagline"
     },
     {
       "header": true,
