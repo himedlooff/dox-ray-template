@@ -2,9 +2,11 @@
 
 A handlebars.js template for [Doxray](https://github.com/himedlooff/doxray)
 
-[Demo](http://himedlooff.github.io/doxray-template/docs/)
+[Live demo: http://himedlooff.github.io/doxray-template/docs/](http://himedlooff.github.io/doxray-template/docs/)
 
-![Animated screencap](screencap.gif)
+Screen cap demo:
+
+![Animated screen cap](screencap.gif)
 
 ## Getting started
 
