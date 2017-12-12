@@ -606,7 +606,6 @@ markup: |
   margin: 18px 0;
   padding-left: 1.3em;
   font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
-  font-size: 18px;
   font-weight: 400;
 }
 .doxray-doc-note:before {
@@ -616,9 +615,11 @@ markup: |
   display: inline-block;
   margin-right: .25em;
   color: #474646;
+  font-size: 18px;
 }
 .doxray-doc-note p {
   margin: 18px 0 0;
+  font-size: 18px;
 }
 .doxray-doc-note code {
   display: inline-block;
