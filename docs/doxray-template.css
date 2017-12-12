@@ -829,6 +829,7 @@ blockMarkup:
   display: inline-block;
   padding: 10px 12px;
   border: 1px solid #ffffff;
+  border-radius: 0;
   background: #6e6c6c;
   color: #ffffff;
   font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
