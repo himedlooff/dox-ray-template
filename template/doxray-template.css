@@ -576,12 +576,12 @@ markup: |
 .doxray-doc-description {
   max-width: 50em;
   margin: 18px 0;
-  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
-  font-size: 26px;
-  font-weight: 400;
 }
 .doxray-doc-description p {
   margin: 18px 0 0;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
+  font-size: 26px;
+  font-weight: 400;
 }
 .doxray-doc-description code {
   display: inline-block;
@@ -605,8 +605,6 @@ markup: |
   max-width: 50em;
   margin: 18px 0;
   padding-left: 1.3em;
-  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
-  font-weight: 400;
 }
 .doxray-doc-note:before {
   content: "●";
@@ -616,10 +614,14 @@ markup: |
   margin-right: .25em;
   color: #474646;
   font-size: 18px;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
+  font-weight: 400;
 }
 .doxray-doc-note p {
   margin: 18px 0 0;
   font-size: 18px;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
+  font-weight: 400;
 }
 .doxray-doc-note code {
   display: inline-block;
