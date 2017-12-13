@@ -174,13 +174,13 @@
                             {{/if}}
                         </div>
                         {{#if this.markup}}
-                            <pre class="doxray-tabs_body{{#unless this.collapseMarkup}} doxray-tabs_body__visible{{/unless}} doxray-doc-code" data-tabs-body="markup"><code class="doxray-doc-code_text">{{this.markup}}</code></pre>
+                            <pre class="doxray-tabs_body{{#unless this.collapseMarkup}} doxray-tabs_body__visible{{/unless}} doxray-doc-code" data-tabs-body="markup"><code class="doxray-doc-code_text language-html">{{this.markup}}</code></pre>
                         {{/if}}
                         {{#if this.scss}}
-                            <pre class="doxray-tabs_body doxray-doc-code" data-tabs-body="scss"><code class="doxray-doc-code_text">{{this.scss}}</code></pre>
+                            <pre class="doxray-tabs_body doxray-doc-code" data-tabs-body="scss"><code class="doxray-doc-code_text language-sass">{{this.scss}}</code></pre>
                         {{/if}}
                         {{#if this.less}}
-                            <pre class="doxray-tabs_body doxray-doc-code" data-tabs-body="less"><code class="doxray-doc-code_text">{{this.less}}</code></pre>
+                            <pre class="doxray-tabs_body doxray-doc-code" data-tabs-body="less"><code class="doxray-doc-code_text language-less">{{this.less}}</code></pre>
                         {{/if}}
                     </div>
                 </section>
