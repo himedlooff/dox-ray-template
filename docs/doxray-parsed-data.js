@@ -313,7 +313,7 @@ var Doxray = {
       "type": "bem element",
       "description": "The title of the site. You may wish to change this to \"Styleguide\" or \"Pattern Library\"",
       "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_title\">\n        UI Docs\n    </span>\n</h1>\n",
-      "less": ".doxray-title_title {\n    display: block;\n    margin: 0 0 12px 0;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    letter-spacing: -.03em;\n    line-height: 1.2;\n}",
+      "less": ".doxray-title_title {\n    display: block;\n    margin: 0 0 12px 0;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-normal;\n    letter-spacing: -.03em;\n    line-height: 1.2;\n}",
       "filename": "doxray-title.less",
       "slug": "doxray-title_title"
     },
