@@ -95,7 +95,6 @@ this.PatternLibrary.handleTabClick = function(e) {
     var $this = $(e.currentTarget);
     var id = $this.data('tabs-btn');
     var currentBtnIsActive = $this.hasClass('doxray-tabs_btn__active');
-    console.log(currentBtnIsActive);
     var $allBtns = $this.parents('[data-tabs]').find('[data-tabs-btn]');
     var $allBodies = $this.parents('[data-tabs]').find('[data-tabs-body]');
     var $matchingBody = $this.parents('[data-tabs]').find('[data-tabs-body="'+id+'"]');

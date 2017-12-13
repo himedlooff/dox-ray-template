@@ -5,20 +5,12 @@ label:
     Demo
 markup: |
     <header class="doxray-title">
-        <span class="doxray-title_brand">
-            Doxray
+        <span class="doxray-title_title">
+            UI Docs
         </span>
-        <span class="doxray-title_ribbon">
-            <span class="doxray-title_ribbon-item doxray-title_ribbon-item__1">
-                Pattern
-            </span>
-            <span class="doxray-title_ribbon-item doxray-title_ribbon-item__bend">
-                &nbsp;
-            </span>
-            <span class="doxray-title_ribbon-item doxray-title_ribbon-item__2">
-                Library
-            </span>
-        </span>
+        <p class="doxray-title_tagline">
+            A documented collection of the HTML and CSS patterns used in the Doxray template.
+        </p>
     </header>
 */
 
@@ -41,19 +33,19 @@ notes:
 
 /* doxray
 label:
-    .doxray-title_brand
+    .doxray-title_title
 description:
     The brand that is using the pattern library. This would get replaced by
     whoever is using the template.
 markup: |
     <h1 class="doxray-title">
-        <span class="doxray-title_brand">
-            Doxray
+        <span class="doxray-title_title">
+            UI Docs
         </span>
     </h1>
 */
 
-.doxray-title_brand {
+.doxray-title_title {
     display: block;
     margin: 0 0 12px 0;
     color: @doxray-color-gray;
@@ -62,145 +54,6 @@ markup: |
     font-weight: @doxray-font-weight-light;
     letter-spacing: -.03em;
     line-height: 1.2;
-}
-
-
-/* doxray
-label:
-    .doxray-title_ribbon
-description:
-    A CSS based ribbon effect to contain the 'Pattern Library' ribbon.
-notes:
-    - >
-        Rotates to counter the skew of `.doxray-title_ribbon-item` to make it look level.
-    - >
-        Also adds the centered double bordered bar.
-*/
-
-.doxray-title_ribbon {
-    position: relative;
-    display: inline-block;
-    perspective: 60px;
-    transform: rotate(8deg);
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: -20px;
-        bottom: 0;
-        left: -20px;
-        height: 3px;
-        margin: auto;
-        border-top: 3px double @doxray-color-shadow;
-        transform: rotate(-8deg);
-    }
-}
-
-
-/* doxray
-label:
-    .doxray-title_ribbon-item
-description:
-    Text with padding and skew to give it a ribbon effect.
-markup: |
-    <span class="doxray-title_ribbon">
-        <span class="doxray-title_ribbon-item">
-            Lorem ipsum
-        </span>
-    </span>
-*/
-
-.doxray-title_ribbon-item {
-    position: relative;
-    display: inline-block;
-    padding: 6px 10px 8px;
-    border: 1px solid @doxray-color-gray;
-    background: @doxray-color-paper-white;
-    color: @doxray-color-gray;
-    font-family: @doxray-font-family-default;
-    font-size: 12px;
-    font-weight: @doxray-font-weight-demi;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    transform: skewY(-8deg);
-}
-
-
-/* doxray
-label:
-    .doxray-title_ribbon-item__1
-notes:
-    - >
-        Needs the highest `z-index` to place it above all ofther pieces of the
-        ribbon.
-*/
-
-.doxray-title_ribbon-item__1 {
-    z-index: 3;
-}
-
-
-/* doxray
-label:
-    .doxray-title_ribbon-item__2
-notes:
-    - >
-        Needs the lowest `z-index` to place it below all ofther pieces of the
-        ribbon.
-    - >
-        Also needs negative left margin to pull it under
-        `.doxray-title_ribbon-item__1` and `.doxray-title_ribbon-item__bend`.
-markup: |
-    <span class="doxray-title_ribbon">
-        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__1">
-            Ribbon 1
-        </span>
-        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__2" style="background-color: red;">
-            Ribbon 2
-        </span>
-    </span>
-*/
-
-.doxray-title_ribbon-item__2 {
-    margin-left: -14px;
-    padding-left: 14px;
-    z-index: 1;
-}
-
-
-/* doxray
-label:
-    .doxray-title_ribbon-item__bend
-description:
-    The bent underside of the ribbon.
-notes:
-    - >
-        Needs `&nbsp;` to give it height.
-markup: |
-    <span class="doxray-title_ribbon">
-        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__1">
-            Ribbon 1
-        </span>
-        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__bend" style="background-color: red;">
-            &nbsp;
-        </span>
-        <span class="doxray-title_ribbon-item doxray-title_ribbon-item__2">
-            Ribbon 2
-        </span>
-    </span>
-*/
-
-.doxray-title_ribbon-item__bend {
-    position: relative;
-    width: 8px;
-    margin-left: -14px;
-    padding-left: 0;
-    padding-right: 0;
-    border-color: @doxray-color-gray;
-    background: @doxray-color-gray;
-    transform: skewY(-46deg) translateY(0px);
-    z-index: 2;
 }
 
 
