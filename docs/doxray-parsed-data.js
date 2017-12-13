@@ -306,12 +306,12 @@ var Doxray = {
       "slug": "doxray-title_title"
     },
     {
-      "label": ".doxray-tagline",
+      "label": ".doxray-title_tagline",
       "description": "Text to clarify the purpose of the page.",
       "markup": "<p class=\"doxray-title_tagline\">\n    A documented collection of the HTML and CSS patterns used in the Doxray template.\n</p>\n",
       "less": ".doxray-title_tagline {\n    display: block;\n    max-width: 220px;\n    margin: 18px auto 0;\n    padding: 0 5px;\n    color: @doxray-color-shadow;\n    font-family: @doxray-font-family-default;\n    font-size: 12px;\n    font-weight: @doxray-font-weight-light;\n    font-style: italic;\n    letter-spacing: 1px;\n    line-height: 1.38;\n    text-align: just;\n}",
       "filename": "doxray-title.less",
-      "slug": "doxray-tagline"
+      "slug": "doxray-title_tagline"
     },
     {
       "header": true,
