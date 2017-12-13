@@ -473,6 +473,13 @@ markup: |
   font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
   font-weight: 400;
 }
+.doxray-doc-note p a,
+.doxray-doc-note p a:link,
+.doxray-doc-note p a:visited,
+.doxray-doc-note p a:hover,
+.doxray-doc-note p a:active {
+  color: #5b7489;
+}
 .doxray-doc-note code {
   display: inline-block;
   padding: 3px 5px;
