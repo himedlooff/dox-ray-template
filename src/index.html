@@ -21,9 +21,9 @@
                     Collapsed view
                 </label>
                 {{#each this}}
-                    <ul class="doxray-toc_file-list">
+                    <ul class="doxray-toc_file-list doxray-toc_file-list__bordered">
                         <li class="doxray-toc_file-list-item">
-                            <a class="doxray-link doxray-link__file" href="?file={{@key}}">
+                            <a class="doxray-link doxray-link__header doxray-link__file" href="?file={{@key}}">
                                 {{@key}}
                             </a>
                             {{#each this}}
@@ -72,11 +72,19 @@
                     </header>
                     <ul class="doxray-toc_file-list">
                         <li class="doxray-toc_file-list-item">
-                            <a class="doxray-link doxray-link__file is-selected" href="?file={{this.0.filename}}">
+                            <a class="doxray-link doxray-link__header" href="index.html">
+                                Home
+                            </a>
+                            <hr class="doxray-link-hr">
+                        </li>
+                        <li class="doxray-toc_file-list-item">
+                            <a class="doxray-link doxray-link__file" href="?file={{this.0.filename}}">
                                 {{this.0.filename}}
                             </a>
-                            {{#each this}}
-                                {{#if this.label}}
+                        </li>
+                        {{#each this}}
+                            {{#if this.label}}
+                                <li class="doxray-toc_file-list-item">
                                     {{#if this.header}}
                                         <a class="doxray-link doxray-link__header" href="?file={{../../../this.0.filename}}#{{this.slug}}">
                                             {{this.label}}
@@ -86,13 +94,12 @@
                                             {{this.label}}
                                         </a>
                                     {{/if}}
-                                {{/if}}
-                            {{/each}}
+                                </li>
+                            {{/if}}
+                        {{/each}}
+                        <li class="doxray-toc_file-list-item">
                             <hr class="doxray-link-hr">
                             <a class="doxray-link doxray-link__docs-nav" href="?file={{this.0.filename}}&raw=true">Raw view</a>
-                            <a class="doxray-link doxray-link__docs-nav" href="index.html">
-                                Back to all patterns
-                            </a>
                         </li>
                     </ul>
                 </div>
