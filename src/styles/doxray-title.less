@@ -1,8 +1,10 @@
 /* doxray
-header:
-    true
 label:
     Demo
+category:
+    styleguide
+header:
+    true
 markup: |
     <header class="doxray-title">
         <span class="doxray-title_title">
@@ -18,10 +20,10 @@ markup: |
 /* doxray
 label:
     .doxray-title
-notes:
-    - >
-        The margins help visually center the title since the Open Sans font and
-        the ribbons have a natural offset to them.
+category:
+    css
+type:
+    bem block
 */
 
 .doxray-title {
@@ -34,9 +36,12 @@ notes:
 /* doxray
 label:
     .doxray-title_title
+category:
+    css
+type:
+    bem element
 description:
-    The brand that is using the pattern library. This would get replaced by
-    whoever is using the template.
+    The title of the site. You may wish to change this to "Styleguide" or "Pattern Library"
 markup: |
     <h1 class="doxray-title">
         <span class="doxray-title_title">
@@ -60,6 +65,10 @@ markup: |
 /* doxray
 label:
     .doxray-title_tagline
+category:
+    css
+type:
+    bem element
 description:
     Text to clarify the purpose of the page.
 markup: |

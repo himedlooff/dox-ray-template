@@ -281,8 +281,9 @@ var Doxray = {
       "slug": "dimension-and-spacing"
     },
     {
-      "header": true,
       "label": "Demo",
+      "category": "styleguide",
+      "header": true,
       "markup": "<header class=\"doxray-title\">\n    <span class=\"doxray-title_title\">\n        UI Docs\n    </span>\n    <p class=\"doxray-title_tagline\">\n        A documented collection of the HTML and CSS patterns used in the Doxray template.\n    </p>\n</header>\n",
       "less": "",
       "filename": "doxray-title.less",
@@ -290,16 +291,17 @@ var Doxray = {
     },
     {
       "label": ".doxray-title",
-      "notes": [
-        "The margins help visually center the title since the Open Sans font and the ribbons have a natural offset to them.\n"
-      ],
+      "category": "css",
+      "type": "bem block",
       "less": ".doxray-title {\n    margin: 0;\n    font-size: 1em;\n    text-align: center;\n}",
       "filename": "doxray-title.less",
       "slug": "doxray-title"
     },
     {
       "label": ".doxray-title_title",
-      "description": "The brand that is using the pattern library. This would get replaced by whoever is using the template.",
+      "category": "css",
+      "type": "bem element",
+      "description": "The title of the site. You may wish to change this to \"Styleguide\" or \"Pattern Library\"",
       "markup": "<h1 class=\"doxray-title\">\n    <span class=\"doxray-title_title\">\n        UI Docs\n    </span>\n</h1>\n",
       "less": ".doxray-title_title {\n    display: block;\n    margin: 0 0 12px 0;\n    color: @doxray-color-gray;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    letter-spacing: -.03em;\n    line-height: 1.2;\n}",
       "filename": "doxray-title.less",
@@ -307,6 +309,8 @@ var Doxray = {
     },
     {
       "label": ".doxray-title_tagline",
+      "category": "css",
+      "type": "bem element",
       "description": "Text to clarify the purpose of the page.",
       "markup": "<p class=\"doxray-title_tagline\">\n    A documented collection of the HTML and CSS patterns used in the Doxray template.\n</p>\n",
       "less": ".doxray-title_tagline {\n    display: block;\n    max-width: 220px;\n    margin: 18px auto 0;\n    padding: 0 5px;\n    color: @doxray-color-shadow;\n    font-family: @doxray-font-family-default;\n    font-size: 12px;\n    font-weight: @doxray-font-weight-light;\n    font-style: italic;\n    letter-spacing: 1px;\n    line-height: 1.38;\n    text-align: just;\n}",
