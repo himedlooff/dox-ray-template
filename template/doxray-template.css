@@ -239,7 +239,7 @@ label:
 .doxray-toc_file-list.is-collapsed {
   margin-bottom: 18px;
 }
-.doxray-toc_file-list.is-collapsed .doxray-link {
+.doxray-toc_file-list.is-collapsed .doxray-link:not(.doxray-link__file) {
   display: none;
 }
 /* doxray

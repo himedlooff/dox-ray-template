@@ -48,7 +48,7 @@ var Doxray = {
     },
     {
       "label": ".doxray-toc_file-list",
-      "less": ".doxray-toc_file-list {\n    display: inline-block;\n    width: 220px;\n    margin: 0 @doxray-margin-md @doxray-margin-lg 0;\n    padding: 0;\n    vertical-align: top;\n    list-style-type: none;\n    text-align: left;\n\n    &.is-collapsed {\n        margin-bottom: @doxray-margin-sm;\n    }\n\n    &.is-collapsed .doxray-link {\n        display: none;\n    }\n}",
+      "less": ".doxray-toc_file-list {\n    display: inline-block;\n    width: 220px;\n    margin: 0 @doxray-margin-md @doxray-margin-lg 0;\n    padding: 0;\n    vertical-align: top;\n    list-style-type: none;\n    text-align: left;\n\n    &.is-collapsed {\n        margin-bottom: @doxray-margin-sm;\n    }\n\n    &.is-collapsed .doxray-link:not(.doxray-link__file) {\n        display: none;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-toc_file-list"
     },
