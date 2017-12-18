@@ -20,7 +20,7 @@
                     <input class="js-doxray-toggle-collapsed-toc" type="checkbox">
                     Collapsed view
                 </label>
-                {{#each this}}
+                {{#each this.files}}
                     <ul class="doxray-toc_file-list doxray-toc_file-list__bordered">
                         <li class="doxray-toc_file-list-item">
                             <a class="doxray-link doxray-link__header doxray-link__file" href="?file={{@key}}">
@@ -203,7 +203,7 @@
         // Add custom properties here
         // Example:
         // PatternLibrary = { customNavContent: [{label:'styleguide', link:'?property=category&value=styleguide'}] };
-        PatternLibrary = {};
+        PatternLibrary = { content: { test: [{label:'styleguide', link:'?property=category&value=styleguide'}]} };
     </script>
     <script src="doxray-template.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">

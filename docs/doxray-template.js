@@ -1,5 +1,7 @@
 this.PatternLibrary = this.PatternLibrary || {};
 
+this.PatternLibrary.content = this.PatternLibrary.content || {};
+
 this.PatternLibrary.init = function() {
     // Save the data and then massage it a little
     // The `Doxray` var is made available from `parsed_docs.js`.
@@ -63,7 +65,7 @@ this.PatternLibrary.makeFilesProperty = function() {
             files[pattern.filename] = [pattern];
         }
     });
-    this.doxray.files = files;
+    this.content.files = files;
 };
 
 this.PatternLibrary.removeExpandersIfNotNeeded = function(e) {
@@ -113,7 +115,7 @@ this.PatternLibrary.makePageContentHTML = function() {
     this.content.templateId = '';
     // Set content and template depending on the page type
     if (this.layout === 'file') {
-        this.content.patterns = this.doxray.files[getParameterByName('file')];
+        this.content.patterns = this.content.files[getParameterByName('file')];
         this.content.templateId = '#doxray-docs_patterns-template';
         this.content.currentFile = this.currentFile;
         this.content.paramPrefix = '?file=' + this.currentFile;
@@ -122,7 +124,7 @@ this.PatternLibrary.makePageContentHTML = function() {
         this.content.showCategory = true;
         this.content.showType = true;
     } else if (this.layout === 'raw-file') {
-        this.content.patterns = this.doxray.files[getParameterByName('file')];
+        this.content.patterns = this.content.files[getParameterByName('file')];
         this.content.templateId = '#doxray-docs_patterns-template-raw';
     } else if (this.layout === 'property') {
         this.content.patterns = this.doxray.getByProperty(this.currentProperty, this.currentValue);
@@ -142,7 +144,7 @@ this.PatternLibrary.makeNavHTML = function() {
 
 this.PatternLibrary.makeTocHTML = function() {
     this.tocTemplate = Handlebars.compile($('#doxray-toc-template').html());
-    return this.tocTemplate(this.doxray.files);
+    return this.tocTemplate(this.content);
 };
 
 
