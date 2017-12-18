@@ -108,33 +108,30 @@ this.PatternLibrary.handleTabClick = function(e) {
 };
 
 this.PatternLibrary.makePageContentHTML = function() {
-    var content = {
-        layout: this.layout,
-        patterns: [],
-        templateId: ''
-    };
+    this.content.layout = this.layout;
+    this.content.patterns = [];
+    this.content.templateId = '';
     // Set content and template depending on the page type
     if (this.layout === 'file') {
-        content.patterns = this.doxray.files[getParameterByName('file')];
-        content.templateId = '#doxray-docs_patterns-template';
-        content.currentFile = this.currentFile;
-        content.paramPrefix = '?file=' + this.currentFile;
-        content.showRawButton = true;
-        content.showFileName = true;
-        content.showCategory = true;
-        content.showType = true;
+        this.content.patterns = this.doxray.files[getParameterByName('file')];
+        this.content.templateId = '#doxray-docs_patterns-template';
+        this.content.currentFile = this.currentFile;
+        this.content.paramPrefix = '?file=' + this.currentFile;
+        this.content.showRawButton = true;
+        this.content.showFileName = true;
+        this.content.showCategory = true;
+        this.content.showType = true;
     } else if (this.layout === 'raw-file') {
-        content.patterns = this.doxray.files[getParameterByName('file')];
-        content.templateId = '#doxray-docs_patterns-template-raw';
+        this.content.patterns = this.doxray.files[getParameterByName('file')];
+        this.content.templateId = '#doxray-docs_patterns-template-raw';
     } else if (this.layout === 'property') {
-        content.patterns = this.doxray.getByProperty(this.currentProperty, this.currentValue);
-        content.templateId = '#doxray-docs_patterns-template';
-        content.currentProperty = this.currentProperty;
-        content.currentValue = this.currentValue;
-        content.paramPrefix = '?property=' + this.currentProperty + (this.currentValue ? '&value=' + this.currentValue : '');
+        this.content.patterns = this.doxray.getByProperty(this.currentProperty, this.currentValue);
+        this.content.templateId = '#doxray-docs_patterns-template';
+        this.content.currentProperty = this.currentProperty;
+        this.content.currentValue = this.currentValue;
+        this.content.paramPrefix = '?property=' + this.currentProperty + (this.currentValue ? '&value=' + this.currentValue : '');
     }
-    this.content = content;
-    this.contentTemplate = Handlebars.compile($(content.templateId).html());
+    this.contentTemplate = Handlebars.compile($(this.content.templateId).html());
     return this.contentTemplate(this.content);
 };
 
