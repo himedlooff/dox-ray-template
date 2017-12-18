@@ -10,22 +10,25 @@ this.PatternLibrary.init = function() {
     this.$docs = $('#doxray');
     this.html = '';
 
+    this.currentFile = getParameterByName('file') ? getParameterByName('file') : this.currentFile;
+    this.currentProperty = getParameterByName('property') ? getParameterByName('property') : this.currentProperty;
+    this.currentValue = getParameterByName('value') ? getParameterByName('value') : this.currentValue;
 
-    // Determine the layout.
+    // Determine the layout and build the HTML
     if (getParameterByName('raw')) {
-        this.layout = 'raw';
+        this.layout = 'raw-file';
+        this.html = this.makePageContentHTML();
         this.$docs.addClass('doxray__raw');
+    } else if (this.currentFile) {
+        this.layout = 'file';
+        this.html = this.makePageContentHTML();
+        this.html += this.makeNavHTML();
+    } else if (this.currentProperty) {
+        this.layout = 'property';
+        this.html = this.makePageContentHTML();
+        this.html += this.makeNavHTML();
     } else {
-        this.layout = 'default';
-    }
-
-    // Build the HTML.
-    if (getParameterByName('file')) {
-        this.html = this.makeContentHTML();
-        if (this.layout === 'default') {
-            this.html += this.makeNavHTML();
-        }
-    } else {
+        this.layout = 'toc';
         this.html = this.makeTocHTML();
     }
 
@@ -104,13 +107,34 @@ this.PatternLibrary.handleTabClick = function(e) {
     $matchingBody.toggleClass('doxray-tabs_body__visible', !currentBtnIsActive);
 };
 
-this.PatternLibrary.makeContentHTML = function() {
-    this.content = this.doxray.files[getParameterByName('file')];
-    if (this.layout === 'raw') {
-        this.contentTemplate = Handlebars.compile($('#doxray-docs_patterns-template-raw').html());
-    } else {
-        this.contentTemplate = Handlebars.compile($('#doxray-docs_patterns-template').html());
+this.PatternLibrary.makePageContentHTML = function() {
+    var content = {
+        layout: this.layout,
+        patterns: [],
+        templateId: ''
+    };
+    // Set content and template depending on the page type
+    if (this.layout === 'file') {
+        content.patterns = this.doxray.files[getParameterByName('file')];
+        content.templateId = '#doxray-docs_patterns-template';
+        content.currentFile = this.currentFile;
+        content.paramPrefix = '?file=' + this.currentFile;
+        content.showRawButton = true;
+        content.showFileName = true;
+        content.showCategory = true;
+        content.showType = true;
+    } else if (this.layout === 'raw-file') {
+        content.patterns = this.doxray.files[getParameterByName('file')];
+        content.templateId = '#doxray-docs_patterns-template-raw';
+    } else if (this.layout === 'property') {
+        content.patterns = this.doxray.getByProperty(this.currentProperty, this.currentValue);
+        content.templateId = '#doxray-docs_patterns-template';
+        content.currentProperty = this.currentProperty;
+        content.currentValue = this.currentValue;
+        content.paramPrefix = '?property=' + this.currentProperty + (this.currentValue ? '&value=' + this.currentValue : '');
     }
+    this.content = content;
+    this.contentTemplate = Handlebars.compile($(content.templateId).html());
     return this.contentTemplate(this.content);
 };
 
@@ -124,10 +148,19 @@ this.PatternLibrary.makeTocHTML = function() {
     return this.tocTemplate(this.doxray.files);
 };
 
-this.PatternLibrary.changeFile = function(file) {
-    this.content = this.doxray.files[file];
-    this.renderContent();
-};
+
+//
+// Handlebars helpers
+//
+
+Handlebars.registerHelper('log', function(something) {
+    console.log(something);
+});
+
+
+//
+// Utility functions
+//
 
 // http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 function getParameterByName(name) {

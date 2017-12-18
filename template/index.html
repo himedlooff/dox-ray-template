@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Doxray</title>
+    <title>UI Docs</title>
     <script type="text/x-handlebars-template" id="doxray-toc-template">
         <main class="doxray-toc" id="doxray-toc">
             <header class="doxray-toc_header">
@@ -46,7 +46,8 @@
         </main>
     </script>
     <script type="text/x-handlebars-template" id="doxray-docs_patterns-template-raw">
-        {{#each this}}{{#unless this.docs.eof}}
+        {{log this}}
+        {{#each this.patterns}}{{#unless this.docs.eof}}
             <section id="{{this.slug}}">
                 {{#if this.label}}
                     <br>
@@ -77,30 +78,34 @@
                             </a>
                             <hr class="doxray-link-hr">
                         </li>
-                        <li class="doxray-toc_file-list-item">
-                            <a class="doxray-link doxray-link__file" href="?file={{this.0.filename}}">
-                                {{this.0.filename}}
-                            </a>
-                        </li>
-                        {{#each this}}
+                        {{#if this.showFileName}}
+                            <li class="doxray-toc_file-list-item">
+                                <a class="doxray-link doxray-link__file" href="?file={{this.patterns.0.filename}}">
+                                    {{this.patterns.0.filename}}
+                                </a>
+                            </li>
+                        {{/if}}
+                        {{#each this.patterns}}
                             {{#if this.label}}
                                 <li class="doxray-toc_file-list-item">
                                     {{#if this.header}}
-                                        <a class="doxray-link doxray-link__header" href="?file={{../../../this.0.filename}}#{{this.slug}}">
+                                        <a class="doxray-link doxray-link__header" href="{{../../../this.paramPrefix}}#{{this.slug}}">
                                             {{this.label}}
                                         </a>
                                     {{else}}
-                                        <a class="doxray-link" href="?file={{../../../this.0.filename}}#{{this.slug}}">
+                                        <a class="doxray-link" href="{{../../../this.paramPrefix}}#{{this.slug}}">
                                             {{this.label}}
                                         </a>
                                     {{/if}}
                                 </li>
                             {{/if}}
                         {{/each}}
-                        <li class="doxray-toc_file-list-item">
-                            <hr class="doxray-link-hr">
-                            <a class="doxray-link doxray-link__docs-nav" href="?file={{this.0.filename}}&raw=true">Raw view</a>
-                        </li>
+                        {{#if showRawButton}}
+                            <li class="doxray-toc_file-list-item">
+                                <hr class="doxray-link-hr">
+                                <a class="doxray-link doxray-link__docs-nav" href="{{this.paramPrefix}}&raw=true">Raw view</a>
+                            </li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>
@@ -108,18 +113,22 @@
     </script>
     <script type="text/x-handlebars-template" id="doxray-docs_patterns-template">
         <main class="doxray-docs_patterns" id="doxray-docs_patterns">
-            {{#each this}}{{#unless this.eof}}
+            {{#each this.patterns}}{{#unless this.eof}}
                 <section class="doxray-doc{{#if this.header}} doxray-doc__header{{/if}}" id="{{this.slug}}">
                     {{#if this.label}}
                         <h1 class="doxray-doc-label{{#if this.header}} doxray-doc-label__header{{/if}}">
                             <a class="doxray-doc-label_link" href="#{{this.slug}}">
                                 {{this.label}}
                             </a>
-                            {{#if this.category}}
-                                <small class="doxray-doc-tag">{{this.category}}</small>
+                            {{#if @root.showCategory}}
+                                {{#if this.category}}
+                                    <small class="doxray-doc-tag">{{this.category}}</small>
+                                {{/if}}
                             {{/if}}
-                            {{#if this.type}}
-                                <small class="doxray-doc-tag">{{this.type}}</small>
+                            {{#if @root.showType}}
+                                {{#if this.type}}
+                                    <small class="doxray-doc-tag">{{this.type}}</small>
+                                {{/if}}
                             {{/if}}
                         </h1>
                     {{/if}}
