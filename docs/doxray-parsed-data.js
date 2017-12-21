@@ -21,13 +21,6 @@ var Doxray = {
       "slug": "the-rest-of-the-patterns"
     },
     {
-      "label": ".doxray-intro",
-      "markup": "...\n",
-      "less": ".doxray-intro {\n    margin: 0 0 1em;\n}\n\n.doxray-intro_header {\n    margin: 0;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-xlg;\n    font-weight: @doxray-font-weight-light;\n    line-height: 1.2;\n}",
-      "filename": "doxray-template.less",
-      "slug": "doxray-intro"
-    },
-    {
       "label": ".doxray-toc_header",
       "markup": "<header class=\"doxray-toc_header\">...</header>\n",
       "less": ".doxray-toc_header {\n    padding: @doxray-margin-lg;\n    border-bottom: 1px solid @doxray-color-dirtier-white;\n}",

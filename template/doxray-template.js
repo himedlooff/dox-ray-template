@@ -15,6 +15,7 @@ this.PatternLibrary.init = function() {
     this.currentFile = getParameterByName('file') ? getParameterByName('file') : this.currentFile;
     this.currentProperty = getParameterByName('property') ? getParameterByName('property') : this.currentProperty;
     this.currentValue = getParameterByName('value') ? getParameterByName('value') : this.currentValue;
+    this.currentPatternId = getParameterByName('id') ? getParameterByName('id') : this.currentPatternId;
 
     // Determine the layout and build the HTML
     if (getParameterByName('raw')) {
@@ -124,7 +125,12 @@ this.PatternLibrary.makePageContentHTML = function() {
         this.content.showCategory = true;
         this.content.showType = true;
     } else if (this.layout === 'raw-file') {
-        this.content.patterns = this.content.files[getParameterByName('file')];
+        if (this.currentPatternId) {
+            this.content.currentPatternId = this.currentPatternId;
+            this.content.patterns = this.doxray.getByProperty('slug', this.currentPatternId);
+        } else {
+            this.content.patterns = this.content.files[getParameterByName('file')];
+        }
         this.content.templateId = '#doxray-docs_patterns-template-raw';
     } else if (this.layout === 'property') {
         this.content.patterns = this.doxray.getByProperty(this.currentProperty, this.currentValue);

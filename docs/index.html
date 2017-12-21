@@ -46,17 +46,21 @@
         </main>
     </script>
     <script type="text/x-handlebars-template" id="doxray-docs_patterns-template-raw">
-        {{#each this.patterns}}{{#unless this.docs.eof}}
-            <section id="{{this.slug}}">
-                {{#if this.label}}
-                    <br>
-                    {{this.label}}
-                    <br>
-                    <br>
-                    {{{this.markup}}}
-                {{/if}}
-            </section>
-        {{/unless}}{{/each}}
+        {{#if this.currentPatternId}}
+            {{{this.patterns.0.markup}}}
+        {{else}}
+            {{#each this.patterns}}{{#unless this.docs.eof}}
+                <section id="{{this.slug}}">
+                    {{#if this.label}}
+                        <br>
+                        {{this.label}}
+                        <br>
+                        <br>
+                        {{{this.markup}}}
+                    {{/if}}
+                </section>
+            {{/unless}}{{/each}}
+        {{/if}}
     </script>
     <script type="text/x-handlebars-template" id="doxray-docs_nav-template">
         <nav class="doxray-docs_nav" id="doxray-docs_nav">
