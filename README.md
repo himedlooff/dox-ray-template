@@ -58,3 +58,7 @@ Feedback and contributions are welcome.
 Please read [CONTRIBUTING](CONTRIBUTING.md).
 
 To file a bug please us this handy [template](https://github.com/himedlooff/doxray-template/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug).
+
+## Credit
+
+Eye icon created by Edward Boatman from the Noun Project: https://thenounproject.com/search/?q=eye&i=421

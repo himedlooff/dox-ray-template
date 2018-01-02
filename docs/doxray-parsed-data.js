@@ -60,6 +60,7 @@ var Doxray = {
     {
       "label": ".doxray-link",
       "markup": "<a class=\"doxray-link\" href=\"#0\">\n    A simple blocky link\n</a>\n",
+      "category": "css",
       "less": ".doxray-link {\n    &,\n    &:link,\n    &:visited {\n        position: relative;\n        display: block;\n        margin: 0;\n        padding: 6px 12px;\n        border: 1px solid @doxray-color-clean-white;\n        background: @doxray-color-clean-white;\n        font-family: @doxray-font-family-default;\n        font-size: @doxray-font-size-sm;\n        color: @doxray-color-gray;\n        text-decoration: none;\n    }\n\n    &:hover,\n    &:focus {\n        background: @doxray-color-dirty-white;\n    }\n\n    &:focus {\n        outline: 0;\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-link"
@@ -115,7 +116,7 @@ var Doxray = {
     {
       "label": ".doxray-doc-tag",
       "markup": "<small class=\"doxray-doc-tag\">Tag</small>\n",
-      "less": ".doxray-doc-tag {\n    display: inline-block;\n    margin: 0 0 0 .5em;\n    padding: .2em .8em;\n    border-radius: @doxray-font-size-sm;\n    font-family: @doxray-font-family-default;\n    font-size: @doxray-font-size-sm;\n    font-weight: @doxray-font-weight-normal;\n    background: @doxray-color-dirtier-white;\n    color: @doxray-color-gray;\n}",
+      "less": ".doxray-doc-tag {\n    &,\n    &:link,\n    &:visited,\n    &:hover,\n    &:active {\n        display: inline-block;\n        margin: 0 0 0 .5em;\n        padding: .2em .8em;\n        border-radius: @doxray-font-size-sm;\n        font-family: @doxray-font-family-default;\n        font-size: @doxray-font-size-sm;\n        font-weight: @doxray-font-weight-normal;\n        background: @doxray-color-dirtier-white;\n        color: @doxray-color-gray;\n        text-decoration: none;\n\n        svg {\n            width: 1em;\n            fill: currentcolor;\n        }\n    }\n}",
       "filename": "doxray-template.less",
       "slug": "doxray-doc-tag"
     },

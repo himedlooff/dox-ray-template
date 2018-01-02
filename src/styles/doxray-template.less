@@ -127,6 +127,8 @@ markup: |
     <a class="doxray-link" href="#0">
         A simple blocky link
     </a>
+category:
+    css
 */
 
 .doxray-link {
@@ -299,15 +301,27 @@ markup: |
 */
 
 .doxray-doc-tag {
-    display: inline-block;
-    margin: 0 0 0 .5em;
-    padding: .2em .8em;
-    border-radius: @doxray-font-size-sm;
-    font-family: @doxray-font-family-default;
-    font-size: @doxray-font-size-sm;
-    font-weight: @doxray-font-weight-normal;
-    background: @doxray-color-dirtier-white;
-    color: @doxray-color-gray;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        display: inline-block;
+        margin: 0 0 0 .5em;
+        padding: .2em .8em;
+        border-radius: @doxray-font-size-sm;
+        font-family: @doxray-font-family-default;
+        font-size: @doxray-font-size-sm;
+        font-weight: @doxray-font-weight-normal;
+        background: @doxray-color-dirtier-white;
+        color: @doxray-color-gray;
+        text-decoration: none;
+
+        svg {
+            width: 1em;
+            fill: currentcolor;
+        }
+    }
 }
 
 
