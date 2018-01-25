@@ -193,23 +193,23 @@
                         {{/if}}
                         <div class="doxray-tabs_tabs">
                             {{#if this.markup}}
-                                <button class="doxray-tabs_btn{{#unless this.collapseMarkup}} doxray-tabs_btn__active{{/unless}}" data-tabs-btn="markup">markup</button>
+                                <button class="doxray-tabs_btn{{#if this.showMarkup}} doxray-tabs_btn__active{{/if}}" data-tabs-btn="markup">markup</button>
                             {{/if}}
                             {{#if this.scss}}
-                                <button class="doxray-tabs_btn" data-tabs-btn="scss">.scss</button>
+                                <button class="doxray-tabs_btn{{#if this.showSCSS}} doxray-tabs_btn__active{{/if}}" data-tabs-btn="scss">.scss</button>
                             {{/if}}
                             {{#if this.less}}
-                                <button class="doxray-tabs_btn" data-tabs-btn="less">.less</button>
+                                <button class="doxray-tabs_btn{{#if this.showLESS}} doxray-tabs_btn__active{{/if}}" data-tabs-btn="less">.less</button>
                             {{/if}}
                         </div>
                         {{#if this.markup}}
-                            <pre class="doxray-tabs_body{{#unless this.collapseMarkup}} doxray-tabs_body__visible{{/unless}} doxray-doc-code" data-tabs-body="markup"><code class="doxray-doc-code_text language-html">{{this.markup}}</code></pre>
+                            <pre class="doxray-tabs_body{{#if this.showMarkup}} doxray-tabs_body__visible{{/if}} doxray-doc-code" data-tabs-body="markup"><code class="doxray-doc-code_text language-html">{{this.markup}}</code></pre>
                         {{/if}}
                         {{#if this.scss}}
-                            <pre class="doxray-tabs_body doxray-doc-code" data-tabs-body="scss"><code class="doxray-doc-code_text language-scss">{{this.scss}}</code></pre>
+                            <pre class="doxray-tabs_body{{#if this.showSCSS}} doxray-tabs_body__visible{{/if}} doxray-doc-code" data-tabs-body="scss"><code class="doxray-doc-code_text language-scss">{{this.scss}}</code></pre>
                         {{/if}}
                         {{#if this.less}}
-                            <pre class="doxray-tabs_body doxray-doc-code" data-tabs-body="less"><code class="doxray-doc-code_text language-less">{{this.less}}</code></pre>
+                            <pre class="doxray-tabs_body{{#if this.showLESS}} doxray-tabs_body__visible{{/if}} doxray-doc-code" data-tabs-body="less"><code class="doxray-doc-code_text language-less">{{this.less}}</code></pre>
                         {{/if}}
                     </div>
                 </section>

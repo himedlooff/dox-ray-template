@@ -8,6 +8,7 @@ this.PatternLibrary.init = function() {
     this.doxray = Doxray;
     this.compileMarkdown();
     this.makeFilesProperty();
+    this.setWhichCodeTabToShow();
 
     this.$docs = $('#doxray');
     this.html = '';
@@ -67,6 +68,31 @@ this.PatternLibrary.makeFilesProperty = function() {
         }
     });
     this.content.files = files;
+};
+
+this.PatternLibrary.setWhichCodeTabToShow = function() {
+    this.doxray.patterns.forEach(function(pattern, index) {
+        if (pattern.collapseAllCode) {
+            pattern.showMarkup = false;
+        } else {
+            pattern.showMarkup = !!pattern.markup;
+            pattern.showMarkup = pattern.collapseMarkup ? false : pattern.showMarkup;
+        }
+        delete pattern.collapseMarkup;
+        if (typeof pattern.scss !== 'undefined') {
+            if (pattern.collapseAllCode) {
+                pattern.showSCSS = false;
+            } else {
+                pattern.showSCSS = pattern.scss ? !pattern.showMarkup : false;
+            }
+        } else if (typeof pattern.less !== 'undefined') {
+            if (pattern.collapseAllCode) {
+                pattern.showLESS = false;
+            } else {
+                pattern.showLESS = pattern.less ? !pattern.showMarkup : false;
+            }
+        }
+    });
 };
 
 this.PatternLibrary.removeExpandersIfNotNeeded = function(e) {
