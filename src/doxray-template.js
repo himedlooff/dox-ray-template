@@ -37,7 +37,7 @@ this.PatternLibrary.init = function() {
     }
 
     // Place the HTML in the DOM.
-    this.$docs.html(this.html);
+    this.$docs.append(this.html);
     this.removeExpandersIfNotNeeded();
     this.initCollapsedTOCBtn();
 
