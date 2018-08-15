@@ -1,5 +1,5 @@
 {
-  "devDependencies": {
+  "dependencies": {
     "doxray": "0.7.0",
     "gulp": "~3.9.0",
     "gulp-autoprefixer": "~2.1.0",
